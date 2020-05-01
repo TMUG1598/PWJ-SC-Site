@@ -1,0 +1,24 @@
+body {
+    font: 20px Montserrat, sans-serif;
+}
+
+#map {
+    margin-top: 20px;
+}
+
+main {
+    background-color: white;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+a:hover{
+    color: white;
+    background-color: gray;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 10px;
+}
