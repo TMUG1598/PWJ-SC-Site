@@ -1,0 +1,110 @@
+[
+    {
+        "name": "Fizan",
+        "UTC": "-7",
+        "diff": -7,
+        "available": [
+            9,
+            17
+        ]
+    },
+    {
+        "name": "Kiska",
+        "UTC": "-6",
+        "diff": -6,
+        "available": [
+            9,
+            17
+        ]
+    },
+    {
+        "name": "Jenn",
+        "UTC": "-5",
+        "diff": -5,
+        "available": [
+            9,
+            17
+        ]
+    },
+    {
+        "name": "Osman",
+        "UTC": "-5",
+        "diff": -5,
+        "available": [
+            9,
+            17
+        ]
+    },
+    {
+        "name": "Rishi",
+        "UTC": "-4",
+        "diff": -4,
+        "available": [
+            9,
+            17
+        ]
+    },
+    {
+        "name": "Youssef",
+        "UTC": "+1",
+        "diff": 1,
+        "available": [
+            9,
+            17
+        ]
+    },
+    {
+        "name": "David",
+        "UTC": "+2",
+        "diff": 2,
+        "available": [
+            9,
+            17
+        ]
+    },
+    {
+        "name": "Muizz",
+        "UTC": "+2",
+        "diff": 2,
+        "available": [
+            9,
+            17
+        ]
+    },
+    {
+        "name": "Gaurav",
+        "UTC": "+5:30",
+        "diff": 5,
+        "available": [
+            9,
+            17
+        ]
+    },
+    {
+        "name": "Van",
+        "UTC": "+7",
+        "diff": 7,
+        "available": [
+            9,
+            17
+        ]
+    },
+    {
+        "name": "Damir",
+        "UTC": "+8",
+        "diff": 8,
+        "available": [
+            9,
+            17
+        ]
+    },
+    {
+        "name": "Tatyana",
+        "UTC": "+8",
+        "diff": 8,
+        "available": [
+            9,
+            17
+        ]
+    }
+]
