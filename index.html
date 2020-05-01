@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PWJ SC: WORLD</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/f1b887a66b.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+<body>
+
+    <nav id="navbar-pwj" class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">PWJ Success Coaches</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active"><a class="nav-link" href="#welcome">Welcome</a></li>
+                <li class="nav-item"><a class="nav-link" href="#coaches">Coaches</a></li>
+                <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="#feedback">Got Feedback?</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="text-center" data-spy="scroll" data-target="#navbar-pwj" data-offset="0">
+        
+        <div id="welcome" class="bg-info text-center text-light" style='height: 700px;'>
+            <h1 class="p-5">WELCOME!</h1>
+            <p>INSERT PICTURE OF TEAM HERE and also edit welcome message</p>
+            <p>Also please make navbar stick on top, make text center vertically in div</p>
+        </div>
+
+        <div id="coaches" class="container">
+            <h2 class="p-5 text-primary">If you are in need of immediate help from any available coach, press button below.</h2>
+            <div class="row">
+                <div class="col">
+                    <button class="m-3 btn btn-dark" onclick="displayLists(this)">Show Coaches</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <div class='result' id='result'></div>
+                </div>
+                <div class="col-4">
+                    <div class='time' id='time'></div>
+                </div>
+                <div class="col-2">
+                    <div class='status' id='status'></div>
+                </div>
+                <div class="col-4">
+                    <div class='contact' id='contact'></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="gallery" class="bg-light text-center" style='margin-top: 50px;'>
+            <div class="p-5 row container">
+                <div class="col-3">
+                    <button class="m-1 btn btn-info" style="width: 100%;">Damir</button>
+                    <button class="m-1 btn btn-info" style="width: 100%;">David</button>
+                    <button class="m-1 btn btn-info" style="width: 100%;">Fizan</button>
+                    <button class="m-1 btn btn-info" style="width: 100%;">Gaurav</button>
+                    <button class="m-1 btn btn-info" style="width: 100%;">Jenn</button>
+                    <button class="m-1 btn btn-info" style="width: 100%;">Kiska</button>
+                    <button class="m-1 btn btn-info" style="width: 100%;">Muizz</button>
+                    <button class="m-1 btn btn-info" style="width: 100%;">Osman</button>
+                    <button class="m-1 btn btn-info" style="width: 100%;">Rishi</button>
+                    <button class="m-1 btn btn-info" style="width: 100%;">Tatyana</button>
+                    <button class="m-1 btn btn-info" style="width: 100%;">Van</button>
+                    <button class="m-1 btn btn-info" style="width: 100%;">Youssef</button>
+                </div>
+                <div class="col-9">
+                    <p>INSERT PICTURE OF COACH AND SOME DATA HERE - add another column for info if needed</p>
+                    <p>imagine profile cards here</p>
+                    <div class='coach-info' id='coach-info'></div>
+                </div>
+            </div>
+        </div>
+        
+        <iframe id='map' width="100%" height="400" frameborder="0" src="https://www.google.com/maps/embed/v1/view?zoom=2&center=35.7465%2C-39.4629&key=AIzaSyC-WA-lW3yDMdEIPpwm1rRTI_2aAPCS-yA" allowfullscreen></iframe>
+        
+        <div id="feedback" class="p-3 bg-danger text-center text-white" style="height: 400px;">
+            <div class="m-5 form-group">
+                <p>Notes: (1) Same issue of vertical align hehe; (2) how to forward feedback to us?...</p>
+                <label for="text-input">You got any feedback? For anyone?</label>
+                <textarea class="form-control" id="text-input" rows="3" placeholder="You can complain or whatever"></textarea>
+            </div>
+        </div>
+
+        <p class="m-5">Footer and Credentials</p>
+    </div>
+
+</body>
+</html>
