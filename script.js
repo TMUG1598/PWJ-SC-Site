@@ -97,7 +97,7 @@ function displayLists(btn) {
 function listCoaches() {
     let coachlist = "<ul class='list-group'>";
     coaches.forEach((value) => {
-        coachlist += `<li class='list-group-item bg-warning'><b>${value.name}</b></li>`;
+        coachlist += `<li class='list-group-item bg-dark text-light'><b>${value.name}</b></li>`;
     })
     coachlist += '</ul>';
     return coachlist;
@@ -106,7 +106,7 @@ function listCoaches() {
 function listTimeZones() {
     let timelist = "<ul class='list-group'>";
     coaches.forEach((value, index) => {
-        timelist += `<li class='list-group-item'>${displayTimeNow(index)}</li>`;
+        timelist += `<li class='list-group-item'>${displayTimeNow(index)}${value.UTC}</li>`;
     })
     timelist += '</ul>';
     return timelist;
@@ -133,7 +133,7 @@ function listContact() {
 function displayTimeNow(i) {
     var d = new Date();
     d.setHours(d.getHours() + coaches[i]['diff']);
-    var n = d.toLocaleString();
+    var n = d.toUTCString();
 
     return n;
 }
@@ -145,9 +145,9 @@ function checkStatus(i) {
     var hour = d.getUTCHours();
 
     if (hour >= coaches[i]['available'][0] && hour < coaches[i]['available'][1]) {
-        return `<li class='list-group-item text-success'>AVAILABLE</li>`;
+        return `<li class='list-group-item text-primary'><i class="fas fa-thumbs-up"></i></li>`;
     } else {
-        return `<li class='list-group-item text-danger'>Offline</li>`;
+        return `<li class='list-group-item text-danger'><i class="fas fa-bed"></i></li>`;
     }
 }
 
@@ -155,20 +155,13 @@ function contactLink(i) {
     var d = new Date();
     d.setHours(d.getHours() + coaches[i]['diff']);
     var hour = d.getUTCHours();
-    var html;
-    if (hour >= coaches[i]['available'][0] && hour < coaches[i]['available'][1]) {
-        // return "<li class='list-group-item text-info'><a href='https://www.google.com/'>" +"<i class='fab fa-slack'></i> " +'Contact ' + coaches[i]['name'] + "</a></li>";
-
-        html = `
+    var html = `
             <li class='list-group-item text-info'>
                 <a href='https://google.com/'>
                     Contact ${coaches[i]['name']} on <i class="fab fa-slack"></i>
                 </a>
             </li>
-        `
-    } else {
-        html =  "<li class='list-group-item text-muted'>" + 'Not available.' + "</li>";
-    }
+        `;
 
     return html;
 }

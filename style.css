@@ -22,3 +22,11 @@ a:hover{
     padding: 8px;
     border-radius: 10px;
 }
+
+#welcome {
+    padding-top: 40px;
+}
+
+#coaches {
+    padding-top: 100px;
+}
