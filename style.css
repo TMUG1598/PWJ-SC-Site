@@ -15,7 +15,7 @@ a{
     text-decoration: none;
 }
 
-a:hover{
+.nav-link:hover{
     color: white;
     background-color: gray;
     text-decoration: none;
@@ -24,9 +24,9 @@ a:hover{
 }
 
 #welcome {
-    padding-top: 40px;
+    padding-top: 10px;
 }
 
-#coaches {
+#coaches, #gallery, #feedback {
     padding-top: 100px;
 }
