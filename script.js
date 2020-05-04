@@ -32,20 +32,20 @@ var coaches = [
         'description': "I am me.",
     },
     {
-        'name': 'Rishi',
-        'UTC': '-4',
-        'diff': -4,
+        'name': 'Jessica',
+        'UTC': '-5',
+        'diff': -5,
         'available': [9, 17],
         'profpic': 'img/js-sample-pic.png',
         'description': "I am me.",
     },
     {
-        'name': 'Jessica',
+        'name': 'Rishi',
         'UTC': '-4',
         'diff': -4,
         'available': [9, 17],
-        'profpic': 'img/js-sample-pic.png',
-        'description': "I am me.",
+        'profpic': 'img/Rishi.jpg',
+        'description': "I am a 21 year old developer who just graduated in Mobile Application Design and Development and I am based in Canada for now. I have expertise in JavaScript, React and I am very enthusiast about Augmented Reality as I am working on one project based on AR and I love how machine learning and deep learning is changing th world. Enrolling in PWJ is one of the best thing I did in my life and I swear I mean it. Becoming Success Coach is kinda first achievement in my field in my life and I am vert proud of myself for that. This is the best community and I look forward to teach and learn as much as I can.",
     },
     {
         'name': 'Youssef',
@@ -116,7 +116,7 @@ var coaches = [
         'UTC': '+8',
         'diff': 8,
         'available': [9, 17],
-        'profpic': 'img/js-sample-pic.png',
+        'profpic': 'img/Taty.jpg',
         'description': "I am me.",
     },
     {
@@ -231,6 +231,15 @@ function coachesGal(btn) {
     })
 
     document.getElementById("tab").innerHTML = coachGallerylist;
+    let arrow = "<i class='fas fa-arrow-circle-left'></i>".repeat(3);
+    document.getElementById('tabcontent').innerHTML = `
+        <div class="d-flex flex-column justify-content-center align-items-center" style="height: 380px;">
+            <h1 class="text-primary">${arrow}</h1>
+            <h1>CHOOSE TO SEE COACH'S INFO</h1>
+            <h1 class="text-primary">${arrow}</h1>
+        </div>
+        `;
+
 }
 
 function openCity(i) {
@@ -239,9 +248,9 @@ function openCity(i) {
             <h1>${coaches[i]['name']}</h1>
             <div class="row"> 
                 <div class="col"> 
-                    <img src=${coaches[i]['profpic']} alt="" height="200px"></img>
+                    <img src=${coaches[i]['profpic']} alt="" height="300px"></img>
                 </div>
-                <div class="col"> 
+                <div class="col" style="text-align: left;"> 
                     <p>${coaches[i]['description']}</p>
                 </div>
             </div>

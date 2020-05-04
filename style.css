@@ -70,5 +70,5 @@ a{
     border: 1px solid #ccc;
     width: 70%;
     border-left: none;
-    max-height: 380px;
+    overflow: scroll;
 }
