@@ -25,11 +25,11 @@
     <div class="text-center" data-spy="scroll" data-target="#navbar-pwj" data-offset="0">
                 
         <div id="welcome" class="bg-info text-light d-flex flex-column justify-content-center align-items-center" style='height: 700px;'>
-            <div class="p-3">
+            <div>
                 <h1>WELCOME!</h1>
             </div>
             <div>
-                <img src='https://via.placeholder.com/800x450.png?text=Photo+of+Success+Coaches'>
+                <img src='img/team-sample.png' height="500px">
             </div>
         </div>
 
@@ -57,34 +57,18 @@
             </div>
         </div>
 
-        <div id="gallery" class="bg-light text-center" style='margin-top: 50px;'>
+        <div id="gallery" class="bg-light text-center" style='margin-top: 50px; height: 650px;'>
             <div>
                 <h2>Gallery of Coaches</h2>
                 <h5>Get to know the coaches more down below.</h5>
             </div>
-            <button class="m-3 btn btn-dark" onclick="coachesGal()">Open Gallery</button>
-
-            <div class="p-5 row container">
-                <div class="col-3" id="coach-gallery">
-                    <!--<button class="m-1 btn btn-info" style="width: 100%;">Damir</button>
-                    <button class="m-1 btn btn-info" style="width: 100%;">David</button>
-                    <button class="m-1 btn btn-info" style="width: 100%;">Fizan</button>
-                    <button class="m-1 btn btn-info" style="width: 100%;">Gaurav</button>
-                    <button class="m-1 btn btn-info" style="width: 100%;">Jenn</button>
-                    <button class="m-1 btn btn-info" style="width: 100%;">Kiska</button>
-                    <button class="m-1 btn btn-info" style="width: 100%;">Muizz</button>
-                    <button class="m-1 btn btn-info" style="width: 100%;">Osman</button>
-                    <button class="m-1 btn btn-info" style="width: 100%;">Rishi</button>
-                    <button class="m-1 btn btn-info" style="width: 100%;">Tatyana</button>
-                    <button class="m-1 btn btn-info" style="width: 100%;">Van</button>
-                    <button class="m-1 btn btn-info" style="width: 100%;">Youssef</button>-->
-                </div>
-                <div class="col-9">
-                    <p>INSERT PICTURE OF COACH AND SOME DATA HERE - add another column for info if needed</p>
-                    <p>imagine profile cards here</p>
-                    <div class='coach-info' id='coach-info'></div>
-                </div>
+            <div>
+                <button class="m-3 btn btn-dark" onclick="coachesGal(this)">Unlock Gallery</button>
             </div>
+
+            <div class="tab" id="tab"></div>
+            <div class="tabcontent" id="tabcontent"></div>
+            
         </div>
         
         <iframe id='map' width="100%" height="400" frameborder="0" src="https://www.google.com/maps/embed/v1/view?zoom=2&center=35.7465%2C-39.4629&key=AIzaSyC-WA-lW3yDMdEIPpwm1rRTI_2aAPCS-yA" allowfullscreen></iframe>
