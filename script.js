@@ -30,9 +30,21 @@ var coaches = [
         'available': [9, 17],
     },
     {
+        'name': 'Jessica',
+        'UTC': '-4',
+        'diff': -4,
+        'available': [9, 17],
+    },
+    {
         'name': 'Youssef',
         'UTC': '+1',
         'diff': 1,
+        'available': [9, 17],
+    },
+    {
+        'name': 'Abdou',
+        'UTC': '+2',
+        'diff': 2,
         'available': [9, 17],
     },
     {
@@ -69,6 +81,12 @@ var coaches = [
         'name': 'Tatyana',
         'UTC': '+8',
         'diff': 8,
+        'available': [9, 17],
+    },
+    {
+        'name': 'Ushan',
+        'UTC': '+12',
+        'diff': 12,
         'available': [9, 17],
     },
 ];
@@ -165,3 +183,13 @@ function contactLink(i) {
 
     return html;
 }
+
+function coachesGal() {
+    let coachGallerylist = [];
+    coaches.forEach((value) => {
+        coachGallerylist += `<button class="m-1 btn btn-info" style="width: 100%;">${value.name}</button>`;
+    })
+    document.getElementById("coach-gallery").innerHTML = coachGallerylist;
+    console.log(coachGallerylist);
+}
+
