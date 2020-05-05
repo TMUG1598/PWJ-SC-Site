@@ -1,9 +1,30 @@
 body {
     font: 20px Montserrat, sans-serif;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 #map {
-    margin-top: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+#welcome {
+    position: absolute;
+    z-index: 100;
+    top: 12%;
+    left: 2%;
+    padding: 20px;
+    border-radius: 20px;
+    height: auto;
+    width: 450px;
+    display: block;
+    text-align: left;
+}
+
+.title {
+    font-size: 70px;
 }
 
 main {

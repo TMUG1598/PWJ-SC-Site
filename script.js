@@ -6,6 +6,7 @@ var coaches = [
         'available': [9, 17],
         'profpic': 'img/js-sample-pic.png',
         'description': "I am me.",
+        'coordinates': [36.7783, -119.4179],
     },
     {
         'name': 'Kiska',
@@ -14,6 +15,7 @@ var coaches = [
         'available': [9, 17],
         'profpic': 'img/js-sample-pic.png',
         'description': "I am me.",
+        'coordinates': [31.9686, -99.9018],
     },
     {
         'name': 'Jenn',
@@ -22,6 +24,7 @@ var coaches = [
         'available': [9, 17],
         'profpic': 'img/js-sample-pic.png',
         'description': "I am me.",
+        'coordinates': [45.2538, -69.4455],
     },
     {
         'name': 'Osman',
@@ -30,6 +33,7 @@ var coaches = [
         'available': [9, 17],
         'profpic': 'img/js-sample-pic.png',
         'description': "I am me.",
+        'coordinates': [45.5017, -73.5673], //not his
     },
     {
         'name': 'Jessica',
@@ -38,6 +42,7 @@ var coaches = [
         'available': [9, 17],
         'profpic': 'img/js-sample-pic.png',
         'description': "I am me.",
+        'coordinates': [40.7128, -74.0060],
     },
     {
         'name': 'Rishi',
@@ -46,6 +51,7 @@ var coaches = [
         'available': [9, 17],
         'profpic': 'img/Rishi.jpg',
         'description': "I am a 21 year old developer who just graduated in Mobile Application Design and Development and I am based in Canada for now. I have expertise in JavaScript, React and I am very enthusiast about Augmented Reality as I am working on one project based on AR and I love how machine learning and deep learning is changing th world. Enrolling in PWJ is one of the best thing I did in my life and I swear I mean it. Becoming Success Coach is kinda first achievement in my field in my life and I am vert proud of myself for that. This is the best community and I look forward to teach and learn as much as I can.",
+        'coordinates': [45.4215, -75.6972],
     },
     {
         'name': 'Youssef',
@@ -54,6 +60,7 @@ var coaches = [
         'available': [9, 17],
         'profpic': 'img/js-sample-pic.png',
         'description': "I am me.",
+        'coordinates': [39.0742, 21.8243],
     },
     {
         'name': 'Abdou',
@@ -62,6 +69,7 @@ var coaches = [
         'available': [9, 17],
         'profpic': 'img/js-sample-pic.png',
         'description': "I am me.",
+        'coordinates': [51.1657, 10.4510],
     },
     {
         'name': 'David',
@@ -70,6 +78,7 @@ var coaches = [
         'available': [9, 17],
         'profpic': 'img/js-sample-pic.png',
         'description': "I am me.",
+        'coordinates': [47.1625, 19.5033],
     },
     {
         'name': 'Muizz',
@@ -78,6 +87,7 @@ var coaches = [
         'available': [9, 17],
         'profpic': 'img/js-sample-pic.png',
         'description': "I am me.",
+        'coordinates': [51.1657, 10.4520],
     },
     {
         'name': 'Gaurav',
@@ -86,6 +96,7 @@ var coaches = [
         'available': [9, 17],
         'profpic': 'img/js-sample-pic.png',
         'description': "I am me.",
+        'coordinates': [20.5937, 78.9629],
     },
     {
         'name': 'Van',
@@ -94,6 +105,7 @@ var coaches = [
         'available': [9, 17],
         'profpic': 'img/js-sample-pic.png',
         'description': "I am me.",
+        'coordinates': [14.0583, 108.2772],
     },
     {
         'name': 'Pisoth',
@@ -102,6 +114,7 @@ var coaches = [
         'available': [9, 17],
         'profpic': 'img/js-sample-pic.png',
         'description': "I am me.",
+        'coordinates': [35.8617, 104.1954],
     },
     {
         'name': 'Damir',
@@ -110,6 +123,7 @@ var coaches = [
         'available': [9, 17],
         'profpic': 'img/js-sample-pic.png',
         'description': "I am me.",
+        'coordinates': [45.8617, 121.7740],
     },
     {
         'name': 'Tatyana',
@@ -118,6 +132,7 @@ var coaches = [
         'available': [9, 17],
         'profpic': 'img/Taty.jpg',
         'description': "I am me.",
+        'coordinates': [12.8797, 121.7740],
     },
     {
         'name': 'Ushan',
@@ -126,6 +141,7 @@ var coaches = [
         'available': [9, 17],
         'profpic': 'img/js-sample-pic.png',
         'description': "I am me.",
+        'coordinates': [-40.9006, 174.8860],
     },
 ];
 
@@ -256,4 +272,198 @@ function openCity(i) {
             </div>
         </div>
     `;
+}
+
+var map;
+var markers = [];
+var infoWindow;
+
+
+function initMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 40, lng: -55},
+        zoom: 2,
+        mapTypeControlOptions: {
+          mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain', 'styled_map']
+        }
+    });
+    var styledMapType = new google.maps.StyledMapType(
+      [
+        {"elementType": "geometry", "stylers": [{"color": "#1d2c4d"}]},
+        {"elementType": "labels.text.fill", "stylers": [{"color": "#8ec3b9"}]},
+        {"elementType": "labels.text.stroke", "stylers": [{"color": "#1a3646"}]},
+        {
+          "featureType": "administrative.country",
+          "elementType": "geometry.stroke",
+          "stylers": [{"color": "#4b6878"}]
+        },
+        {
+          "featureType": "administrative.land_parcel",
+          "elementType": "labels.text.fill",
+          "stylers": [{"color": "#64779e"}]
+        },
+        {
+          "featureType": "administrative.province",
+          "elementType": "geometry.stroke",
+          "stylers": [{"color": "#4b6878"}]
+        },
+        {
+          "featureType": "landscape.man_made",
+          "elementType": "geometry.stroke",
+          "stylers": [{"color": "#334e87"}]
+        },
+        {
+          "featureType": "landscape.natural",
+          "elementType": "geometry",
+          "stylers": [{"color": "#023e58"}]
+        },
+        {
+          "featureType": "poi",
+          "elementType": "geometry",
+          "stylers": [{"color": "#283d6a"}]
+        },
+        {
+          "featureType": "poi",
+          "elementType": "labels.text.fill",
+          "stylers": [{"color": "#6f9ba5"}]
+        },
+        {
+          "featureType": "poi",
+          "elementType": "labels.text.stroke",
+          "stylers": [{"color": "#1d2c4d"}]
+        },
+        {
+          "featureType": "poi.park",
+          "elementType": "geometry.fill",
+          "stylers": [{"color": "#023e58"}]
+        },
+        {
+          "featureType": "poi.park",
+          "elementType": "labels.text.fill",
+          "stylers": [{"color": "#3C7680"}]
+        },
+        {
+          "featureType": "road",
+          "elementType": "geometry",
+          "stylers": [{"color": "#304a7d"}]
+        },
+        {
+          "featureType": "road",
+          "elementType": "labels.text.fill",
+          "stylers": [{"color": "#98a5be"}]
+        },
+        {
+          "featureType": "road",
+          "elementType": "labels.text.stroke",
+          "stylers": [{"color": "#1d2c4d"}]
+        },
+        {
+          "featureType": "road.highway",
+          "elementType": "geometry",
+          "stylers": [{"color": "#2c6675"}]
+        },
+        {
+          "featureType": "road.highway",
+          "elementType": "geometry.stroke",
+          "stylers": [{"color": "#255763"}]
+        },
+        {
+          "featureType": "road.highway",
+          "elementType": "labels.text.fill",
+          "stylers": [{"color": "#b0d5ce"}]
+        },
+        {
+          "featureType": "road.highway",
+          "elementType": "labels.text.stroke",
+          "stylers": [{"color": "#023e58"}]
+        },
+        {
+          "featureType": "transit",
+          "elementType": "labels.text.fill",
+          "stylers": [{"color": "#98a5be"}]
+        },
+        {
+          "featureType": "transit",
+          "elementType": "labels.text.stroke",
+          "stylers": [{"color": "#1d2c4d"}]
+        },
+        {
+          "featureType": "transit.line",
+          "elementType": "geometry.fill",
+          "stylers": [{"color": "#283d6a"}]
+        },
+        {
+          "featureType": "transit.station",
+          "elementType": "geometry",
+          "stylers": [{"color": "#3a4762"}]
+        },
+        {
+          "featureType": "water",
+          "elementType": "geometry",
+          "stylers": [{"color": "#0e1626"}]
+        },
+        {
+          "featureType": "water",
+          "elementType": "labels.text.fill",
+          "stylers": [{"color": "#4e6d70"}]
+        }
+      ], {name: 'Styled Map'});
+    map.mapTypes.set('styled_map', styledMapType);
+    map.setMapTypeId('styled_map');
+
+    infoWindow = new google.maps.InfoWindow();
+    showMarkers(coaches);
+}
+
+function showMarkers(coaches){
+    coaches.forEach((value) => {
+        var latlng = new google.maps.LatLng(value.coordinates[0], value.coordinates[1]);
+        //var name = value.name;
+        var image = value.profpic;
+        createMarker(latlng, image);
+    })
+    // var bounds = new google.maps.LatLngBounds();
+    // map.fitBounds(bounds);
+
+
+    // for(var [index, store] of stores.entries()){
+    //     var latlng = new google.maps.LatLng(
+    //         store["coordinates"]["latitude"],
+    //         store["coordinates"]["longitude"]);
+    //     var name = store["name"];
+    //     var address = store["addressLines"][0];
+    //     var hours = store["openStatusText"];
+    //     var phone = store["storeNumber"];
+
+    //     bounds.extend(latlng);
+    //     createMarker(latlng, name, address, index+1, hours, phone)
+    // }
+}
+
+function createMarker(latlng, image){
+    var html = `
+      <img src=${image} alt="" height="200px"></img>
+      `;
+
+    var marker = new google.maps.Marker({
+        map: map,
+        position: latlng,
+        animation: google.maps.Animation.DROP
+    });
+  
+    google.maps.event.addListener(marker, 'mouseover', function() {
+        marker.setAnimation(google.maps.Animation.BOUNCE);
+    });
+
+    google.maps.event.addListener(marker, 'click', function() {
+        infoWindow.setContent(html);
+        infoWindow.open(map, marker);
+    });
+
+    google.maps.event.addListener(marker, 'mouseout', function() {
+        marker.setAnimation(null);
+    });
+  
+    markers.push(marker);
+    console.log(markers);
 }
