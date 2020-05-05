@@ -3,7 +3,8 @@
 
 <head>
     <title>PWJ SC PORTAL</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/f1b887a66b.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
@@ -38,21 +39,23 @@
     <div id="map"></div>
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-WA-lW3yDMdEIPpwm1rRTI_2aAPCS-yA&callback=initMap">
-    </script>
+        </script>
 
-    <div id="about" class="bg-warning text-dark d-flex flex-column justify-content-center align-items-center" style='height: 700px;'>
+    <div id="about" class="bg-warning text-dark d-flex flex-column justify-content-center align-items-center"
+        style='height: 700px;'>
+        <h1>WHO ARE WE?</h1>
         <div>
-            <h1>WHO ARE WE?</h1>
-            <p>Let's just put whatever we need to tell them.</p>
+                <p class="line-1 anim-typewriter">Let's just put whatever we need to tell them.</p>
         </div>
     </div>
 
     <div id="coaches" class="text-center">
         <h2 class="p-2 text-primary"><b>SUCCESS COACHES</b></h2>
-        <h5>Please press the button below to see if the coach is available at the moment or if you would simply want to reach out to them.</h5>
+        <h5>Please press the button below to see if the coach is available at the moment or if you would simply want to
+            reach out to them.</h5>
         <div class="row">
             <div class="col">
-                <button class="m-3 btn btn-dark" onclick="displayLists(this)">Show Details</button>
+                <button class="m-3 btn btn-dark" onclick="displayLists(this)" id="showDetails">Show Details</button>
             </div>
         </div>
         <div class="container">
@@ -71,7 +74,7 @@
                 </div>
             </div>
         </div>
-        
+
     </div>
 
     <div id="gallery" class="bg-light text-center" style='margin-top: 50px; height: 700px;'>
@@ -85,17 +88,19 @@
 
         <div class="tab" id="tab"></div>
         <div class="tabcontent" id="tabcontent"></div>
-        
+
     </div>
-    
-    <div id="calendar" class="bg-primary text-light d-flex flex-column justify-content-center align-items-center" style='height: 700px;'>
+
+    <div id="calendar" class="bg-primary text-light d-flex flex-column justify-content-center align-items-center"
+        style='height: 700px;'>
         <div>
             <h1>Calendar</h1>
             <p>Google Calendar API???</p>
         </div>
     </div>
 
-    <div id="stuck" class="bg-dark text-light d-flex flex-column justify-content-center align-items-center" style='height: 700px;'>
+    <div id="stuck" class="bg-dark text-light d-flex flex-column justify-content-center align-items-center"
+        style='height: 700px;'>
         <div>
             <h1>GOT STUCK?</h1>
             <p>per module...</p>
@@ -109,7 +114,8 @@
         </div>
         <div class="m-5 form-group">
             <label for="text-input">You got any feedback? For anyone?</label>
-            <textarea class="form-control" id="text-input" rows="5" placeholder="You can complain or whatever"></textarea>
+            <textarea class="form-control" id="text-input" rows="5"
+                placeholder="You can complain or whatever"></textarea>
             <button class="m-3 btn btn-light">Send</button>
         </div>
     </div>
@@ -117,7 +123,8 @@
     <p class="m-5">Footer and Credentials</p>
 
 
-    
+
 
 </body>
+
 </html>

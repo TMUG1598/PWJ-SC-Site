@@ -3,6 +3,7 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 #map {
@@ -21,6 +22,7 @@ body {
     width: 450px;
     display: block;
     text-align: left;
+    opacity: 0.7;
 }
 
 .title {
@@ -29,6 +31,9 @@ body {
 
 main {
     background-color: white;
+}
+h1{
+    margin: 10px;
 }
 
 a{
@@ -83,6 +88,10 @@ a{
 .tab button.active {
     background-color: #ccc;
 }
+.bg-warning {
+    background-color: #378ebf!important;
+    color: white !important;
+}
 
     /* Style the tab content */
 .tabcontent {
@@ -91,5 +100,38 @@ a{
     border: 1px solid #ccc;
     width: 70%;
     border-left: none;
-    overflow: scroll;
+    overflow: hidden;
+}
+
+
+/* this is the animation code for typewriter animation  */
+
+/* Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+.line-1{
+    position: relative;
+    top: 50%;  
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 24em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
 }
