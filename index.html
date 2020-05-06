@@ -44,8 +44,8 @@
     <div id="about" class="bg-warning text-dark d-flex flex-column justify-content-center align-items-center"
         style='height: 700px;'>
         <h1>WHO ARE WE?</h1>
-        <div>
-                <p class="line-1 anim-typewriter">Let's just put whatever we need to tell them.</p>
+        <div id= "about-typewriter">
+                
         </div>
     </div>
 
@@ -107,17 +107,35 @@
         </div>
     </div>
 
-    <div id="feedback" class="bg-danger text-center text-white" style="height: 600px;">
-        <div>
-            <h2>You got any feedback?</h2>
-            <h5>Use this form to share anything you would want the coaches to know.</h5>
+ <!-- We can either implement this feedback with node functionality 
+    or use the airtable form... we can decide closer to launch  -->
+
+    <div id="feedback" class="py-5 bg-danger text-center text-white">
+        <h2>You got any feedback?</h2>
+        <h5>Use this form to share anything you would want the coaches to know.</h5>
+         
+        <!-- <iframe class="airtable-embed" 
+                src="https://airtable.com/embed/shrl0E1WWbZgN9UTb?"
+                frameborder="0" 
+                onmousewheel="" 
+                width="30%" 
+                height="760" 
+                style="background: transparent; border: none;"
+                >
+            </iframe> -->
+
+        <div class="form-group d-flex flex-column justify-content-center align-items-center">
+            <form id="feedbackForm" class="w-75">
+                <label for="text-input" class="px-2 py-4">You got any feedback? For anyone?</label>
+                <textarea class="form-control my-3 px-2 py-4" id="text-input" rows="4" placeholder="Tell us what you're thinking!"></textarea>
+                <div class="form-group d-flex flex-row justify-content-between">
+                    <input type="text" class="form-control m-3  px-2 py-4" id="name" name="full-name" placeholder="What's your name?"/>
+                    <input type="email" class="form-control m-3 px-2 py-4" id ="email" name="email-address" placeholder="What's your email address?"/>
+                </div>
+                <button type="submit" class="btn btn-light btn-outline secondary" id="Form-submit"> Submit </button>
+            </form>
         </div>
-        <div class="m-5 form-group">
-            <label for="text-input">You got any feedback? For anyone?</label>
-            <textarea class="form-control" id="text-input" rows="5"
-                placeholder="You can complain or whatever"></textarea>
-            <button class="m-3 btn btn-light">Send</button>
-        </div>
+
     </div>
 
     <p class="m-5">Footer and Credentials</p>

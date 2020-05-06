@@ -24,8 +24,8 @@ var coaches = [
     'UTC': '-5',
     'diff': -5,
     'available': [9, 17],
-    'profpic': 'img/js-sample-pic.png',
-    'description': "I am me.",
+    'profpic': 'img/Jenn.png',
+    'description': "I am a frontend developer with expertise in CSS styling, data visualizations (using d3.js and chart.js), and UI/UX design. I am a bit quirky with a touch of fanciful imagination and a lover of shiny tech gadgets. I belive sharing memes is a true love language. I aspire to make the world a better place one smile at a time. My pronouns are She/Her.",
     'coordinates': [45.2538, -69.4455],
   },
   {
@@ -476,3 +476,26 @@ function createMarker(latlng, image) {
   markers.push(marker);
   console.log(markers);
 }
+
+//Start scroll heightfunctionality for About typewriter animation
+window.addEventListener("scroll", throttle(typwriterText, 1000));
+
+function throttle(fn, wait) {
+  var time = Date.now();
+  return function() {
+    if ((time + wait - Date.now()) < 0) {
+      fn();
+      time = Date.now();
+    }
+  }
+}
+
+function typwriterText() {
+  if(window.scrollY>= 300){
+    document.getElementById('about-typewriter').innerHTML = 
+     `<p class="line-1 anim-typewriter">
+        Let's just put whatever we need to tell them.
+      </p>`;
+  }
+}
+//End scroll heightfunctionality for About typewriter animation
