@@ -272,10 +272,10 @@ function openCity(i) {
         <div style="padding: 20px; height: 380px;">
             <h1>${coaches[i]['name']}</h1>
             <div class="row"> 
-                <div class="col"> 
-                    <img src=${coaches[i]['profpic']} alt="" height="300px"></img>
+                <div class="col-5"> 
+                    <img src=${coaches[i]['profpic']} alt="" height="250px"></img>
                 </div>
-                <div class="col" style="text-align: left;"> 
+                <div class="col-7" style="text-align: left;"> 
                     <p>${coaches[i]['description']}</p>
                 </div>
             </div>
