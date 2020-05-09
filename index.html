@@ -1,130 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <title>PWJ SC PORTAL</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/f1b887a66b.js" crossorigin="anonymous"></script>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script
+      src="https://kit.fontawesome.com/f1b887a66b.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
-
-    <nav id="navbar-pwj" class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">PWJ Success Coaches</a>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active"><a class="nav-link" href="#map">Welcome</a></li>
-                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#coaches">Coaches</a></li>
-                <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
-                <li class="nav-item"><a class="nav-link" href="#calendar">Calendar</a></li>
-                <li class="nav-item"><a class="nav-link" href="#stuck">Got Stuck?</a></li>
-                <li class="nav-item"><a class="nav-link" href="#feedback">Got Feedback?</a></li>
-            </ul>
-        </div>
+  <body>
+    <nav
+      id="navbar-pwj"
+      class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark"
+    >
+      <a class="navbar-brand" href="#">PWJ Success Coaches</a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#map">Welcome</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#coaches">Coaches</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#gallery">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#calendar">Calendar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#stuck">Got Stuck?</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#feedback">Got Feedback?</a>
+          </li>
+        </ul>
+      </div>
     </nav>
 
     <div id="welcome" class="bg-info text-light">
-        <div class="title">WELCOME</div>
-        <h1>TO THE PORTAL OF SUCCESS</h1>
-        <div>
-            <p>By the Success Coaches.<br>For the entire PWJ Community.</p>
-        </div>
+      <div class="title">WELCOME</div>
+      <h1>TO THE PORTAL OF SUCCESS</h1>
+      <div>
+        <p>By the Success Coaches.<br />For the entire PWJ Community.</p>
+      </div>
     </div>
 
     <div id="map"></div>
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-WA-lW3yDMdEIPpwm1rRTI_2aAPCS-yA&callback=initMap">
-        </script>
-
-    <div id="about" class="bg-warning text-dark d-flex flex-column justify-content-center align-items-center"
-        style='height: 700px;'>
-        <h1>WHO ARE WE?</h1>
-        <div>
-                <p class="line-1 anim-typewriter">Let's just put whatever we need to tell them.</p>
-        </div>
-    </div>
-
-    <div id="coaches" class="text-center">
-        <h2 class="p-2 text-primary"><b>SUCCESS COACHES</b></h2>
-        <h5>Please press the button below to see if the coach is available at the moment or if you would simply want to
-            reach out to them.</h5>
-        <div class="row">
-            <div class="col">
-                <button class="m-3 btn btn-dark" onclick="displayLists(this)" id="showDetails">Show Details</button>
-            </div>
-        </div>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-WA-lW3yDMdEIPpwm1rRTI_2aAPCS-yA&callback=initMap"
+    ></script>
+    <section>
+      <div
+        id="about"
+        class="bg-warning text-dark d-flex flex-column justify-content-center align-items-center"
+        style="height: 100%;"
+      >
         <div class="container">
-            <div class="row">
-                <div class="col-2">
-                    <div class='result' id='result'></div>
-                </div>
-                <div class="col-5">
-                    <div class='time' id='time'></div>
-                </div>
-                <div class="col-1">
-                    <div class='status' id='status'></div>
-                </div>
-                <div class="col-4">
-                    <div class='contact' id='contact'></div>
-                </div>
+          <h1 data-aos="zoom-in">WHO ARE WE?</h1>
+          <div data-aos="zoom-in">
+            <p class="lead line-1">
+              We are one of the best resources to help you make the most out of
+              this course. We try to personalise your experience regardless of
+              your skill level and throw in a bit of fun while at it.
+            </p>
+          </div>
+
+          <h1 data-aos="zoom-in">WHAT WILL YOU GET FROM US?</h1>
+          <div class="row justify-content-center features">
+            <div class="col-sm-6 col-md-5 col-lg-4 item" data-aos="fade-right">
+              <div class="box">
+                <i class="fas fa-laptop-code icon"></i>
+                <h3 class="name">Video Feedback On Your Homework</h3>
+                <p class="description">
+                  You will receive video feedback on every homework you submit
+                  including submitted PWJ module projects&nbsp;
+                </p>
+              </div>
             </div>
+            <div class="col-sm-6 col-md-5 col-lg-4 item" data-aos="fade-left">
+              <div class="box">
+                <i class="fas fa-headphones-alt icon"></i>
+                <h3 class="name">One-on-One Coaching Calls (If Required)</h3>
+                <p class="description">
+                  Yes, you can schedule a One-on-One call with any one of us if
+                  you need that additional support.
+                </p>
+              </div>
+            </div>
+            <div
+              class="col-sm-6 col-md-5 col-lg-4 item show-on-scroll"
+              data-aos="fade-right"
+            >
+              <div class="box">
+                <i class="far fa-life-ring icon"></i>
+                <h3 class="name">Ad-hoc Support</h3>
+                <p class="description">
+                  Sometimes Slack or Facebook posts may get lost and not
+                  answered. Feel free to tag any one of us. We are happy to jump
+                  in to help you.
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-5 col-lg-4 item" data-aos="fade-left">
+              <div class="box">
+                <i class="fas fa-users icon"></i>
+                <h3 class="name">Weekly Live Coaching Calls&nbsp;</h3>
+                <p class="description">
+                  We will be hosting weekly Live Coaching calls on topics that
+                  matter to you so always look out for those invites.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-
+      </div>
+    </section>
+    <div id="coaches" class="text-center">
+      <h2 class="p-2 text-primary"><b>SUCCESS COACHES</b></h2>
+      <h5>
+        Please press the button below to see if the coach is available at the
+        moment or if you would simply want to reach out to them.
+      </h5>
+      <div class="row">
+        <div class="col">
+          <button
+            class="m-3 btn btn-dark"
+            onclick="displayLists(this)"
+            id="showDetails"
+          >
+            Show Details
+          </button>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-2">
+            <div class="result" id="result"></div>
+          </div>
+          <div class="col-5">
+            <div class="time" id="time"></div>
+          </div>
+          <div class="col-1">
+            <div class="status" id="status"></div>
+          </div>
+          <div class="col-4">
+            <div class="contact" id="contact"></div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div id="gallery" class="bg-light text-center" style='margin-top: 50px; height: 700px;'>
-        <div>
-            <h2>Gallery of Coaches</h2>
-            <h5>Get to know the coaches more down below.</h5>
-        </div>
-        <div>
-            <button class="m-3 btn btn-dark" onclick="coachesGal(this)">Unlock Gallery</button>
-        </div>
+    <div
+      id="gallery"
+      class="bg-light text-center"
+      style="margin-top: 50px; height: 700px;"
+    >
+      <div>
+        <h2>Gallery of Coaches</h2>
+        <h5>Get to know the coaches more down below.</h5>
+      </div>
+      <div>
+        <button class="m-3 btn btn-dark" onclick="coachesGal(this)">
+          Unlock Gallery
+        </button>
+      </div>
 
-        <div class="tab" id="tab"></div>
-        <div class="tabcontent" id="tabcontent"></div>
-
+      <div class="tab" id="tab"></div>
+      <div class="tabcontent" id="tabcontent"></div>
     </div>
 
-    <div id="calendar" class="bg-primary text-light d-flex flex-column justify-content-center align-items-center"
-        style='height: 700px;'>
-        <div>
-            <h1>Calendar</h1>
-            <p>Google Calendar API???</p>
-        </div>
+    <div
+      id="calendar"
+      class="bg-primary text-light d-flex flex-column justify-content-center align-items-center"
+      style="height: 700px;"
+    >
+      <div>
+        <h1>Calendar</h1>
+        <p>Google Calendar API???</p>
+      </div>
     </div>
 
-    <div id="stuck" class="bg-dark text-light d-flex flex-column justify-content-center align-items-center"
-        style='height: 700px;'>
-        <div>
-            <h1>GOT STUCK?</h1>
-            <p>per module...</p>
-        </div>
+    <div
+      id="stuck"
+      class="bg-dark text-light d-flex flex-column justify-content-center align-items-center"
+      style="height: 700px;"
+    >
+      <div>
+        <h1>GOT STUCK?</h1>
+        <p>per module...</p>
+      </div>
     </div>
 
-    <div id="feedback" class="bg-danger text-center text-white" style="height: 600px;">
-        <div>
-            <h2>You got any feedback?</h2>
-            <h5>Use this form to share anything you would want the coaches to know.</h5>
-        </div>
-        <div class="m-5 form-group">
-            <label for="text-input">You got any feedback? For anyone?</label>
-            <textarea class="form-control" id="text-input" rows="5"
-                placeholder="You can complain or whatever"></textarea>
-            <button class="m-3 btn btn-light">Send</button>
-        </div>
+    <div
+      id="feedback"
+      class="bg-danger text-center text-white"
+      style="height: 600px;"
+    >
+      <div>
+        <h2>You got any feedback?</h2>
+        <h5>
+          Use this form to share anything you would want the coaches to know.
+        </h5>
+      </div>
+      <div class="m-5 form-group">
+        <label for="text-input">You got any feedback? For anyone?</label>
+        <textarea
+          class="form-control"
+          id="text-input"
+          rows="5"
+          placeholder="You can complain or whatever"
+        ></textarea>
+        <button class="m-3 btn btn-light">Send</button>
+      </div>
     </div>
 
     <p class="m-5">Footer and Credentials</p>
 
-
-
-
-</body>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>
