@@ -90,8 +90,8 @@ var coaches = [
     UTC: "+2",
     diff: 2,
     available: [9, 17],
-    profpic: "img/js-sample-pic.png",
-    description: "I am me.",
+    profpic: "img/Muizz.jpg",
+    description: "I'm originally from Nigeria but I've lived in  France and currently in Germany where I'm  working as a Product Owner in a sports company. I'm a stickler for web technologies and love solving problems with coding. Always interested in anything video games, web development, and travelling.",
     coordinates: [51.1657, 10.452],
   },
   {
