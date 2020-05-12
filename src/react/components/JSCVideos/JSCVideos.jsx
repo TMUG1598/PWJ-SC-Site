@@ -12,11 +12,11 @@ const JSCVideos = ({ playListId }) => {
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+        
         const playlistItems = data.items.map((item) => item.snippet);
         setVideos(playlistItems);
       });
-    console.log('getPlayListItems');
+    
   };
 
   useEffect(() => {
