@@ -5,7 +5,7 @@ import JSCVideos from './components/JSCVideos/JSCVideos';
 const App = () => {
   return (
     <div>
-      <JSCVideos />
+      <JSCVideos playListId="PLmcLAMi0ZBwJ5cs92ppNp_-UeDDSXQtSW" />
     </div>
   );
 };
