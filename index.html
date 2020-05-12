@@ -22,6 +22,7 @@
   </head>
 
   <body>
+    
     <nav
       id="navbar-pwj"
       class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark"
@@ -52,6 +53,8 @@
       </div>
     </nav>
 
+   
+
     <div id="welcome" class="bg-info text-light">
       <div class="title">WELCOME</div>
       <h1>TO THE PORTAL OF SUCCESS</h1>
@@ -59,14 +62,11 @@
         <p>By the Success Coaches.<br />For the entire PWJ Community.</p>
       </div>
     </div>
-
+    
     <div id="map"></div>
-    <script
-      async
-      defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-WA-lW3yDMdEIPpwm1rRTI_2aAPCS-yA&callback=initMap"
-    ></script>
-    <section>
+ 
+ 
+    <section id="about-section">
       <div
         id="about"
         class="bg-warning text-dark d-flex flex-column justify-content-center align-items-center"
@@ -166,7 +166,7 @@
         </div>
       </div>
     </div>
-
+<section>
     <div
       id="gallery"
       class="bg-light text-center"
@@ -181,11 +181,11 @@
           Unlock Gallery
         </button>
       </div>
+        <div class="tab" id="tab"></div>
+        <div class="tabcontent" id="tabcontent"></div>
+  </section>
 
-      <div class="tab" id="tab"></div>
-      <div class="tabcontent" id="tabcontent"></div>
-    </div>
-
+  <section id="calendar-section">
     <div
       id="calendar"
       class="bg-primary text-light d-flex flex-column justify-content-center align-items-center"
@@ -196,7 +196,9 @@
         <p>Google Calendar API???</p>
       </div>
     </div>
+  </section>
 
+  <section id="got-stuck-section"> 
     <div
       id="stuck"
       class="bg-dark text-light d-flex flex-column justify-content-center align-items-center"
@@ -206,8 +208,10 @@
         <h1>GOT STUCK?</h1>
         <p>per module...</p>
       </div>
+  </section> 
     </div>
 
+    <section id="feedback-section">
     <div
       id="feedback"
       class="bg-danger text-center text-white"
@@ -230,9 +234,16 @@
         <button class="m-3 btn btn-light">Send</button>
       </div>
     </div>
+  </section>
 
+  <section id="footer-section">
     <p class="m-5">Footer and Credentials</p>
-
+  </section>
+  <script
+  async
+  defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-WA-lW3yDMdEIPpwm1rRTI_2aAPCS-yA&callback=initMap"
+></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();

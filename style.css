@@ -164,3 +164,47 @@ a {
     border-right-color: transparent;
   }
 } */
+
+/*Coaches Gallery Animation*/
+.arrow-icon {
+  animation: sld-left 2s infinite;
+  color: #378ebf;
+}
+
+@keyframes sld-left {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50%,
+  65% {
+    transform: translateX(-30px);
+  }
+}
+/*End Coaches Gallery animation
+
+/* additional styling for gallery */
+.gallery-info {
+  padding-bottom: 50px;
+  height: 380px;
+  text-align: justify;
+}
+
+.gallery-info-desc {
+  height: 380px;
+  overflow-y: scroll;
+  /* padding-left: 0; */
+  /* padding-left: 30px; */
+  /* margin-right: 0px;
+  padding-right: 30px;
+  padding-left: 0px; */
+}
+.gallery-img-col {
+  padding-right: 0;
+
+  padding-bottom: 30px;
+
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
