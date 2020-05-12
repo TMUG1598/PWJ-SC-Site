@@ -61,11 +61,6 @@ const StyledInput = styled.input`
   padding: 0.5rem;
   margin-left: 0.5rem;
   border: 1px solid grey;
-  outline: none;
-  transition: border 0.05s;
-  &:focus {
-    border: 1px solid #03a1fc;
-  }
 `;
 
 export const VideoContainer = styled.div`
