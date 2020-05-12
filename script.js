@@ -258,7 +258,7 @@ function coachesGal(btn) {
   });
 
   document.getElementById("tab").innerHTML = coachGallerylist;
-  let arrow = "<i class='fas fa-arrow-circle-left'></i>".repeat(3);
+  let arrow = "<i class='fas fa-arrow-circle-left arrow-icon'></i>".repeat(3);
   document.getElementById("tabcontent").innerHTML = `
         <div class="d-flex flex-column justify-content-center align-items-center" style="height: 380px;">
             <h1 class="text-primary">${arrow}</h1>
@@ -270,14 +270,16 @@ function coachesGal(btn) {
 
 function openCity(i) {
   document.getElementById("tabcontent").innerHTML = `
-        <div style="padding: 20px; height: 380px;">
-            <h1>${coaches[i]["name"]}</h1>
+        <div class="gallery-info" data-aos="zoom-in">
+            
             <div class="row"> 
-                <div class="col-5"> 
-                    <img src=${coaches[i]['profpic']} alt="" height="250px"></img>
+                <div class="col col-md-auto gallery-img-col"> 
+                    <img class="img-thumbnail" src=${coaches[i]["profpic"]} alt="" width="350px" ></img>
                 </div>
-                <div class="col-7" style="text-align: left;"> 
-                    <p>${coaches[i]['description']}</p>
+
+                <div class="col gallery-info-desc"> 
+                    <h1>${coaches[i]["name"]}</h1>
+                    <span>${coaches[i]["description"]}</span>
                 </div>
             </div>
         </div>
