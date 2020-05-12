@@ -5,6 +5,7 @@ import styled from 'styled-components';
 
 const JSCVideos = ({ playListId }) => {
   const [videos, setVideos] = useState([]);
+  const [query, setQuery] = useState('');
   const getPlaylistItems = () => {
     const apiKey = 'AIzaSyDUwgBPrArU-r2TMEH0DX5PYTiVHT3oExI';
     const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playListId}&key=${apiKey}`;
@@ -22,22 +23,30 @@ const JSCVideos = ({ playListId }) => {
     getPlaylistItems();
   }, []);
 
+  const onSearch = () => {
+    let query = event.target.value.toLowerCase();
+    setQuery(query);
+  };
+
   return (
-    <div id="videos">
+    <div style={{ padding: '1rem' }} id="videos">
       <Heading>Video Gallery</Heading>
+      <StyledInput onChange={onSearch} type="text" placeholder="Search Video" />
       <VideoContainer>
-        {videos.map((video) => {
-          return (
-            <VideoCard
-              key={video.resourceId.videoId}
-              id={video.resourceId.videoId}
-              description={video.description}
-              thumbnail={video.thumbnails.high.url}
-              title={video.title}
-              playListId={playListId}
-            />
-          );
-        })}
+        {videos
+          .filter((video) => video.title.toLowerCase().includes(query))
+          .map((video) => {
+            return (
+              <VideoCard
+                key={video.resourceId.videoId}
+                id={video.resourceId.videoId}
+                description={video.description}
+                thumbnail={video.thumbnails.high.url}
+                title={video.title}
+                playListId={playListId}
+              />
+            );
+          })}
       </VideoContainer>
     </div>
   );
@@ -47,9 +56,16 @@ const Heading = styled.h1`
   text-align: center;
 `;
 
+const StyledInput = styled.input`
+  border-radius: 1rem;
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+  border: 1px solid grey;
+`;
+
 export const VideoContainer = styled.div`
   display: flex;
-  padding: 1rem;
+
   flex-wrap: wrap;
 `;
 
