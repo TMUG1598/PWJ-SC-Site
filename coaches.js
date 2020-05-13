@@ -1,4 +1,4 @@
-[
+let coaches = [
     {
       "name": "Fizan",
       "UTC": "-7",
