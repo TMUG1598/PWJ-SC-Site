@@ -107,7 +107,7 @@ window.onload = function () {
   });
 };
 
-window.onunload = () => {
+window.onbeforeunload = () => {
   clearInterval(intervalId);
 }
 
