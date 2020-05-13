@@ -12,12 +12,12 @@ body {
 }
 
 #welcome-container {
-  background-color: rgb(58, 56, 56, 0.70);
+  background-color: rgb(58, 56, 56, 0.7);
   width: 700px;
   height: 100%;
 }
 
-.container i {
+.container-fluid i {
   font-size: 50px;
   padding-bottom: 20px;
 }
@@ -28,7 +28,7 @@ body {
   align-self: flex-end;
 }
 
-.container h1 {
+.container-fluid h1 {
   text-align: center;
   padding-top: 50px;
   padding-bottom: 10px;
@@ -42,6 +42,8 @@ body {
   background: white;
   color: #3a3838;
   border-radius: 5px;
+  height: 420px;
+  max-width: 300px;
 }
 
 .title {
@@ -76,7 +78,6 @@ a {
 #coaches {
   padding-top: 100px;
   padding-bottom: 100px;
-
 }
 
 #gallery {
@@ -102,31 +103,32 @@ a {
   outline: none;
   text-align: center;
   cursor: pointer;
-  transition: 0.3s;
+  margin-bottom: 10px;
+  transition: all 0.3s ease-in-out;
 }
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-  background-color:#0275d8;
-  color: black;
-  border-radius: 40px;
+  background-color: #0275d8;
+  color: white;
+  border-radius: 10px;
 }
 
 /* Create an active/current "tab button" class */
 .tab button.active {
   background-color: #0275d8;
   color: white;
-  border-radius: 40px;
+  border-radius: 10px;
 }
 
 /* Style the tab content */
 .tabcontent {
-    float: left;
-    padding: 0px 12px;
-    border: 1px solid #ccc;
-    width: 80%;
-    border-left: none;
-    overflow: scroll;
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 80%;
+  border-left: none;
+  overflow: scroll;
 }
 
 /* this is the animation code for typewriter animation  */
@@ -140,8 +142,9 @@ a {
   /* width: 40em; */
   margin: 0 auto;
   /* border-right: 2px solid rgba(255, 255, 255, 0.75); */
-  font-size: 120%;
+  font-size: 140%;
   text-align: center;
+  max-width: 750px;
   /* white-space: nowrap; */
   overflow: hidden;
   /* transform: translateY(-50%); */
@@ -191,7 +194,7 @@ a {
 .gallery-info {
   padding-bottom: 50px;
   height: 400px;
-  text-align: justify;
+  text-align: left;
 }
 
 .gallery-info-desc {
