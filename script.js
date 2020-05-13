@@ -77,10 +77,10 @@ openProfile = (btn, index) => {
     `;
 }
 
-createCoachesGallery = (coaches) => {
+createCoachesGallery = () => {
   let coachGallerylist = [];
   coaches.forEach((coach, index) => {
-    coachGallerylist += `<button class="tabname tablinks" onclick="coach.openProfile(this, ${index})">${coach.name}</button>`;
+    coachGallerylist += `<button class="tabname tablinks" onclick="openProfile(this, ${index})">${coach.name}</button>`;
   });
 
   document.getElementById("tab").innerHTML = coachGallerylist;
@@ -95,7 +95,7 @@ createCoachesGallery = (coaches) => {
 
 let intervalId;
 window.onload = function () {
-  createCoachesGallery(coaches);
+  createCoachesGallery();
   intervalId = setInterval(() => showCoaches(), 1000);
 };
 
