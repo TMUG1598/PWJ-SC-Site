@@ -22,6 +22,12 @@ body {
   padding-bottom: 20px;
 }
 
+.icon i {
+  font-size: 40px;
+  padding-bottom: 20px;
+  align-self: flex-end;
+}
+
 .container h1 {
   text-align: center;
   padding-top: 50px;

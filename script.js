@@ -27,12 +27,12 @@ var coaches = [
     slack: { userId: "U012QP89WTB", profileSearchUrl: "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" }
   },
   {
-    name: "Osman",
+    name: "Usman",
     UTC: "-5",
     diff: { hours: -5, minutes: 0 },
-    available: [9, 17],
-    profpic: "img/js-sample-pic.png",
-    description: "I am me.",
+    available: [10, 18],
+    profpic: "img/Usman.jpg",
+    description: "I am QA Automation Tester &  Becoming Full Stack Developer very soon. I am in EST time zone. I am good in HTML, CSS, JSON, and JS and my available time 10 am est to 18 est (14 est to 14:30 est is exception)",
     slack: { userId: "U0132DUPHCY", profileSearchUrl: "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" }
   },
   {
@@ -122,9 +122,9 @@ var coaches = [
     name: "Damir",
     UTC: "+8",
     diff: { hours: 8, minutes: 0 },
-    available: [9, 17],
-    profpic: "img/js-sample-pic.png",
-    description: "I am me.",
+    available: [9, 13], // Available on Monday/Tuesday 1-7 PM, Other days 9am - 1pm
+    profpic: "img/Damir.jpg",
+    description: "Musician and JavaScript developer. I have around one year of experience in HTML/CSS/JS. If you are a beginner in some of these areas [(1) html/ structure & data structures; (2) css/ grid, flexbox, bootstrap, responsive web design; (3)javascript/ fundamentals and manipulating the data] I can introduce them to you step by step. I am familiar with different teaching styles and processes regarding to my previous teaching experience of 6 years.",
     slack: { userId: "U011CNAAEP9", profileSearchUrl: "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" }
   },
   {
@@ -140,83 +140,51 @@ var coaches = [
     name: "Ushan",
     UTC: "+12",
     diff: { hours: 12, minutes: 0 },
-    available: [9, 17],
-    profpic: "img/js-sample-pic.png",
-    description: "I am me.",
+    available: [20, 23], //Monday - Thursday  NZST  20:00 - 23:00, Saturday - Sunday NZST  10:00 - 12:00
+    profpic: "img/Ushan.jpg",
+    description: "I am Tech Lover with passion for Coding and Teaching. Nowadays my free time is spent learning Javascript, HTML, CSS and working on projects here at PWJ Course. I have over decade of experience in Tech Support and Product Training and hoping to combine that with my Javascipt and coding knowledge to help any beginner get to the next level in their coding journey.",
     slack: { userId: "U0119RT1A5P", profileSearchUrl: "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" }
   },
 ];
 var intervalId;
-function displayLists(btn) {
-  btn.classList.toggle("active");
 
+window.onload = function () {
+  coachesGal();
+  intervalId = setInterval(() => {showCoaches()}, 1000);
+};
 
-
-  if (btn.classList.contains("active") == true) {
-    const coachlist = listCoaches();
-    const timelist = listTimeZones()
-    const statuslist = listStatus();
-    const contactlist = listContact();
-    document.getElementById("showDetails").innerHTML = "Hide Details";
-    document.getElementById("result").innerHTML = coachlist;
-    document.getElementById("time").innerHTML = timelist;
-    document.getElementById("status").innerHTML = statuslist;
-    document.getElementById("contact").innerHTML = contactlist;
-    intervalId = setInterval(() => {
-      document.getElementById("time").innerHTML = listTimeZones();
-      document.getElementById("status").innerHTML = listStatus();
-    }, 1000);
-
-    // This to change the text in the button when clicked
-  } else {
-    // This to change the text in the button when clicked
-    document.getElementById("showDetails").innerHTML = "Show Details";
-    document.getElementById("result").innerHTML = "";
-    document.getElementById("time").innerHTML = "";
-    document.getElementById("status").innerHTML = "";
-    document.getElementById("contact").innerHTML = "";
-    clearInterval(intervalId);
+function showCoaches() {
+  let cards = "";
+  for (let i = 0; i < coaches.length; i++) {
+    cards += coachCard(i);
   }
+  document.getElementById('coach-card').innerHTML = cards;
 }
 
-
-function listCoaches() {
-  let coachlist = "<ul class='list-group'>";
-  coaches.forEach((value) => {
-    coachlist += `<li class='list-group-item bg-dark text-light'><b>${value.name}</b></li>`;
-  });
-  coachlist += "</ul>";
-  return coachlist;
+function coachCard(i) {
+  let html = `
+    <div class="card" style="width: 300px; margin: 10px">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-8">
+            <h2 class="card-title display-4" style="font-family: 'Bebas Neue';">${coaches[i].name}</h2>
+          </div>
+          <div class="col-4">
+            <div class="icon">${checkStatus(i)}</div>
+          </div>
+        </div>
+        <h4 class="card-subtitle mb-2 text-muted">${displayTimeNow(i)}${coaches[i]["UTC"]}</h4>
+        <p class="card-text"></p>
+        <a class="text-primary" href= ${coaches[i]["slack"].profileSearchUrl}${coaches[i]["slack"].userId} target="_blank">
+            Open ${coaches[i]["name"]}'s <i class="fab fa-slack"></i> Profile
+        </a>
+      </div>
+    </div>
+  `;
+  console.log(html);
+  return html;
 }
 
-function listTimeZones() {
-  let timelist = "<ul class='list-group'>";
-  coaches.forEach((value, index) => {
-    timelist += `<li class='list-group-item'>${displayTimeNow(index)}${
-      value.UTC
-      }</li>`;
-  });
-  timelist += "</ul>";
-  return timelist;
-}
-
-function listStatus() {
-  let statuslist = "<ul class='list-group'>";
-  coaches.forEach((value, index) => {
-    statuslist += checkStatus(index);
-  });
-  statuslist += "</ul>";
-  return statuslist;
-}
-
-function listContact() {
-  let contact = "<ul class='list-group'>";
-  coaches.forEach((value, index) => {
-    contact += contactLink(index);
-  });
-  contact += "</ul>";
-  return contact;
-}
 
 function displayTimeNow(i) {
   let date = new Date();
@@ -235,30 +203,12 @@ function checkStatus(i) {
   var hour = date.getUTCHours();
 
   if (hour >= coaches[i]["available"][0] && hour < coaches[i]["available"][1]) {
-    return `<li class='list-group-item text-primary'><i class="fas fa-thumbs-up"></i></li>`;
+    return `<div class="text-primary"><i class="fas fa-thumbs-up"></i></div>`;
   } else {
-    return `<li class='list-group-item text-danger'><i class="fas fa-bed"></i></li>`;
+    return `<div class="text-danger"><i class="fas fa-bed"></i></div>`;
   }
 }
 
-function contactLink(i) {
-  var date = new Date();
-  date.setHours(date.getHours() + coaches[i]["diff"]);
-  var hour = date.getUTCHours();
-  var html = `
-            <li class='list-group-item text-info'>
-                <a href= ${coaches[i]["slack"].profileSearchUrl}${coaches[i]["slack"].userId} target="_blank">
-                    Contact ${coaches[i]["name"]} on <i class="fab fa-slack"></i>
-                </a>
-            </li>
-        `;
-
-  return html;
-}
-
-window.onload = function () {
-  coachesGal()
-};
 
 var coachGallerylist = [];
 

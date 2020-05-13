@@ -41,6 +41,9 @@
               <a class="nav-link" href="#about">About</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="#coaches">Coaches</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="#gallery">Gallery</a>
             </li>
           </ul>
@@ -140,36 +143,13 @@
     <div id="coaches" class="text-center">
       <h1 class="text-primary display-2" data-aos="zoom-in" style="font-family: 'Bebas Neue';"><b>LIST OF SUCCESS COACHES</b></h1>
       <h5 data-aos="zoom-in">
-        Please press the button below to see if the coach is available at the
-        moment or if you would simply want to reach out to them.
+        All the coaches are listed below. Contacting them will redirect you to their Slack profiles.
       </h5>
-      <div class="row">
-        <div class="col">
-          <button
-            class="m-3 btn btn-dark"
-            onclick="displayLists(this)"
-            id="showDetails"
-          >
-            Show Details
-          </button>
-        </div>
-      </div>
-      <div style="margin-right: 100px; margin-left: 100px;">
-        <div class="row">
-          <div class="col-2">
-            <div class="result" id="result"></div>
-          </div>
-          <div class="col-5">
-            <div class="time" id="time"></div>
-          </div>
-          <div class="col-1">
-            <div class="status" id="status"></div>
-          </div>
-          <div class="col-4">
-            <div class="contact" id="contact"></div>
-          </div>
-        </div>
-      </div>
+      <h5 data-aos="zoom-in">
+        Please take note whether they are available or possibly asleep. However, you may still leave them a message through Slack.
+      </h5>
+      <div class="d-flex flex-row flex-wrap justify-content-center text-left" 
+        id="coach-card" data-aos="zoom-in-up"></div>
     </div>
 
   <section>
