@@ -6,7 +6,6 @@ var coaches = [
     available: [9, 17],
     profpic: "img/js-sample-pic.png",
     description: "I am me.",
-    coordinates: [36.7783, -119.4179],
     slack:
       "https://app.slack.com/client/T011D0D7T54/D012JMC0RH9/thread/C011D0D7WDC-1588478636.190000",
   },
@@ -17,7 +16,6 @@ var coaches = [
     available: [9, 17],
     profpic: "img/js-sample-pic.png",
     description: "I am me.",
-    coordinates: [31.9686, -99.9018],
   },
   {
     'name': 'Jenn',
@@ -26,7 +24,6 @@ var coaches = [
     'available': [9, 17],
     'profpic': 'img/Jenn.png',
     'description': "I am a frontend developer with expertise in CSS styling, data visualizations (using d3.js and chart.js), and UI/UX design. I am a bit quirky with a touch of fanciful imagination and a lover of shiny tech gadgets. I belive sharing memes is a true love language. I aspire to make the world a better place one smile at a time. My pronouns are She/Her.",
-    'coordinates': [45.2538, -69.4455],
   },
   {
     name: "Osman",
@@ -35,7 +32,6 @@ var coaches = [
     available: [9, 17],
     profpic: "img/js-sample-pic.png",
     description: "I am me.",
-    coordinates: [45.5017, -73.5673], //not his
   },
   {
     name: "Jessica",
@@ -44,7 +40,6 @@ var coaches = [
     available: [9, 17],
     profpic: "img/js-sample-pic.png",
     description: "I am me.",
-    coordinates: [40.7128, -74.006],
   },
   {
     name: "Rishi",
@@ -54,7 +49,6 @@ var coaches = [
     profpic: "img/Rishi.jpg",
     description:
       "I am a 21 year old developer who just graduated in Mobile Application Design and Development and I am based in Canada for now. I have expertise in JavaScript, React and I am very enthusiast about Augmented Reality as I am working on one project based on AR and I love how machine learning and deep learning is changing th world. Enrolling in PWJ is one of the best thing I did in my life and I swear I mean it. Becoming Success Coach is kinda first achievement in my field in my life and I am vert proud of myself for that. This is the best community and I look forward to teach and learn as much as I can.",
-    coordinates: [45.4215, -75.6972],
   },
   {
     name: "Youssef",
@@ -64,7 +58,6 @@ var coaches = [
     profpic: "img/Yousseff.JPG",
     description:
       "I am a JavaScript Developer and a Microsoft Student Partner. I am passionate about CODING and new technologies. AND OF COURSE I LOVE PIZZA",
-    coordinates: [35.62814, 10.76076],
     slack: "https://app.slack.com/client/T011D0D7T54/D012QM7Q6MP",
   },
   {
@@ -74,7 +67,6 @@ var coaches = [
     available: [9, 17],
     profpic: "img/js-sample-pic.png",
     description: "I am me.",
-    coordinates: [51.1657, 10.451],
   },
   {
     name: "David",
@@ -83,7 +75,6 @@ var coaches = [
     available: [9, 17],
     profpic: "img/js-sample-pic.png",
     description: "I am me.",
-    coordinates: [47.1625, 19.5033],
   },
   {
     name: "Muizz",
@@ -92,7 +83,6 @@ var coaches = [
     available: [9, 17],
     profpic: "img/Muizz.jpg",
     description: "I'm originally from Nigeria but I've lived in  France and currently in Germany where I'm  working as a Product Owner in a sports company. I'm a stickler for web technologies and love solving problems with coding. Always interested in anything video games, web development, and travelling.",
-    coordinates: [51.1657, 10.452],
   },
   {
     name: "Gaurav",
@@ -101,7 +91,6 @@ var coaches = [
     available: [9, 17],
     profpic: "img/js-sample-pic.png",
     description: "I am me.",
-    coordinates: [20.5937, 78.9629],
   },
   {
     name: "Van",
@@ -110,7 +99,6 @@ var coaches = [
     available: [9, 17],
     profpic: "img/js-sample-pic.png",
     description: "I am me.",
-    coordinates: [14.0583, 108.2772],
   },
   {
     name: "Pisoth",
@@ -119,7 +107,6 @@ var coaches = [
     available: [9, 17],
     profpic: "img/js-sample-pic.png",
     description: "I am me.",
-    coordinates: [35.8617, 104.1954],
   },
   {
     name: "Damir",
@@ -128,7 +115,6 @@ var coaches = [
     available: [9, 17],
     profpic: "img/js-sample-pic.png",
     description: "I am me.",
-    coordinates: [45.8617, 121.774],
   },
   {
     name: "Tatyana",
@@ -136,8 +122,7 @@ var coaches = [
     diff: 8,
     available: [9, 17],
     profpic: "img/Taty.jpg",
-    description: "I am me.",
-    coordinates: [12.8797, 121.774],
+    description: "Currently located in the Philippines, I graduated in Chemistry and Material Science Engineering. Coding has always been something I thought I could do but this is the first time I really feel like I belong in the digital world. I love algorithms, rubick's cubesss, coffee, and surfing! I've also been told I am a good teacher, no matter the subject! *wink*",
   },
   {
     name: "Ushan",
@@ -146,7 +131,6 @@ var coaches = [
     available: [9, 17],
     profpic: "img/js-sample-pic.png",
     description: "I am me.",
-    coordinates: [-40.9006, 174.886],
   },
 ];
 
@@ -249,32 +233,40 @@ function contactLink(i) {
   return html;
 }
 
-function coachesGal(btn) {
-  btn.classList.toggle("active");
+window.onload = function () {
+  coachesGal()
+};
 
-  let coachGallerylist = [];
+var coachGallerylist = [];
+
+function coachesGal() {
   coaches.forEach((value, index) => {
-    coachGallerylist += `<button class="tablinks" onclick="openCity(${index})">${value.name}</button>`;
+    coachGallerylist += `<button class="tabname tablinks" onclick="openProfile(this, ${index})">${value.name}</button>`;
   });
 
   document.getElementById("tab").innerHTML = coachGallerylist;
   let arrow = "<i class='fas fa-arrow-circle-left arrow-icon'></i>".repeat(3);
   document.getElementById("tabcontent").innerHTML = `
-        <div class="d-flex flex-column justify-content-center align-items-center" style="height: 380px;">
-            <h1 class="text-primary">${arrow}</h1>
-            <h1>CHOOSE TO SEE COACH'S INFO</h1>
-            <h1 class="text-primary">${arrow}</h1>
+        <div class="d-flex flex-column justify-content-center align-items-center" style="height: 400px;">
+            <h1 class="text-primary display-1">${arrow}</h1>
         </div>
         `;
 }
 
-function openCity(i) {
+function openProfile(btn, i) {
+  let tabName = document.getElementsByClassName('tabname');
+    for (let i = 0; i < tabName.length; i++) {
+        if (tabName[i].classList.contains('active') == true){
+          tabName[i].classList.remove('active');
+        }
+  }
+  btn.classList.toggle("active");
   document.getElementById("tabcontent").innerHTML = `
         <div class="gallery-info" data-aos="zoom-in">
             
             <div class="row"> 
                 <div class="col col-md-auto gallery-img-col"> 
-                    <img class="img-thumbnail" src=${coaches[i]["profpic"]} alt="" width="350px" ></img>
+                    <img class="img-thumbnail" src=${coaches[i]["profpic"]} alt="" width="380px" ></img>
                 </div>
 
                 <div class="col gallery-info-desc"> 
@@ -285,223 +277,3 @@ function openCity(i) {
         </div>
     `;
 }
-
-var map;
-var markers = [];
-var infoWindow;
-
-function initMap() {
-  map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: 40, lng: -55 },
-    zoom: 2,
-    mapTypeControlOptions: {
-      mapTypeIds: ["roadmap", "satellite", "hybrid", "terrain", "styled_map"],
-    },
-  });
-  var styledMapType = new google.maps.StyledMapType(
-    [
-      { elementType: "geometry", stylers: [{ color: "#1d2c4d" }] },
-      { elementType: "labels.text.fill", stylers: [{ color: "#8ec3b9" }] },
-      { elementType: "labels.text.stroke", stylers: [{ color: "#1a3646" }] },
-      {
-        featureType: "administrative.country",
-        elementType: "geometry.stroke",
-        stylers: [{ color: "#4b6878" }],
-      },
-      {
-        featureType: "administrative.land_parcel",
-        elementType: "labels.text.fill",
-        stylers: [{ color: "#64779e" }],
-      },
-      {
-        featureType: "administrative.province",
-        elementType: "geometry.stroke",
-        stylers: [{ color: "#4b6878" }],
-      },
-      {
-        featureType: "landscape.man_made",
-        elementType: "geometry.stroke",
-        stylers: [{ color: "#334e87" }],
-      },
-      {
-        featureType: "landscape.natural",
-        elementType: "geometry",
-        stylers: [{ color: "#023e58" }],
-      },
-      {
-        featureType: "poi",
-        elementType: "geometry",
-        stylers: [{ color: "#283d6a" }],
-      },
-      {
-        featureType: "poi",
-        elementType: "labels.text.fill",
-        stylers: [{ color: "#6f9ba5" }],
-      },
-      {
-        featureType: "poi",
-        elementType: "labels.text.stroke",
-        stylers: [{ color: "#1d2c4d" }],
-      },
-      {
-        featureType: "poi.park",
-        elementType: "geometry.fill",
-        stylers: [{ color: "#023e58" }],
-      },
-      {
-        featureType: "poi.park",
-        elementType: "labels.text.fill",
-        stylers: [{ color: "#3C7680" }],
-      },
-      {
-        featureType: "road",
-        elementType: "geometry",
-        stylers: [{ color: "#304a7d" }],
-      },
-      {
-        featureType: "road",
-        elementType: "labels.text.fill",
-        stylers: [{ color: "#98a5be" }],
-      },
-      {
-        featureType: "road",
-        elementType: "labels.text.stroke",
-        stylers: [{ color: "#1d2c4d" }],
-      },
-      {
-        featureType: "road.highway",
-        elementType: "geometry",
-        stylers: [{ color: "#2c6675" }],
-      },
-      {
-        featureType: "road.highway",
-        elementType: "geometry.stroke",
-        stylers: [{ color: "#255763" }],
-      },
-      {
-        featureType: "road.highway",
-        elementType: "labels.text.fill",
-        stylers: [{ color: "#b0d5ce" }],
-      },
-      {
-        featureType: "road.highway",
-        elementType: "labels.text.stroke",
-        stylers: [{ color: "#023e58" }],
-      },
-      {
-        featureType: "transit",
-        elementType: "labels.text.fill",
-        stylers: [{ color: "#98a5be" }],
-      },
-      {
-        featureType: "transit",
-        elementType: "labels.text.stroke",
-        stylers: [{ color: "#1d2c4d" }],
-      },
-      {
-        featureType: "transit.line",
-        elementType: "geometry.fill",
-        stylers: [{ color: "#283d6a" }],
-      },
-      {
-        featureType: "transit.station",
-        elementType: "geometry",
-        stylers: [{ color: "#3a4762" }],
-      },
-      {
-        featureType: "water",
-        elementType: "geometry",
-        stylers: [{ color: "#0e1626" }],
-      },
-      {
-        featureType: "water",
-        elementType: "labels.text.fill",
-        stylers: [{ color: "#4e6d70" }],
-      },
-    ],
-    { name: "Styled Map" }
-  );
-  map.mapTypes.set("styled_map", styledMapType);
-  map.setMapTypeId("styled_map");
-
-  infoWindow = new google.maps.InfoWindow();
-  showMarkers(coaches);
-}
-
-function showMarkers(coaches) {
-  coaches.forEach((value) => {
-    var latlng = new google.maps.LatLng(
-      value.coordinates[0],
-      value.coordinates[1]
-    );
-    //var name = value.name;
-    var image = value.profpic;
-    createMarker(latlng, image);
-  });
-  // var bounds = new google.maps.LatLngBounds();
-  // map.fitBounds(bounds);
-
-  // for(var [index, store] of stores.entries()){
-  //     var latlng = new google.maps.LatLng(
-  //         store["coordinates"]["latitude"],
-  //         store["coordinates"]["longitude"]);
-  //     var name = store["name"];
-  //     var address = store["addressLines"][0];
-  //     var hours = store["openStatusText"];
-  //     var phone = store["storeNumber"];
-
-  //     bounds.extend(latlng);
-  //     createMarker(latlng, name, address, index+1, hours, phone)
-  // }
-}
-
-function createMarker(latlng, image) {
-  var html = `
-      <img src=${image} alt="" height="200px"></img>
-      `;
-
-  var marker = new google.maps.Marker({
-    map: map,
-    position: latlng,
-    animation: google.maps.Animation.DROP,
-  });
-
-  google.maps.event.addListener(marker, "mouseover", function () {
-    marker.setAnimation(google.maps.Animation.BOUNCE);
-  });
-
-  google.maps.event.addListener(marker, "click", function () {
-    infoWindow.setContent(html);
-    infoWindow.open(map, marker);
-  });
-
-  google.maps.event.addListener(marker, "mouseout", function () {
-    marker.setAnimation(null);
-  });
-
-  markers.push(marker);
-  console.log(markers);
-}
-
-// //Start scroll heightfunctionality for About typewriter animation
-// window.addEventListener("scroll", throttle(typwriterText, 1000));
-
-// function throttle(fn, wait) {
-//   var time = Date.now();
-//   return function() {
-//     if ((time + wait - Date.now()) < 0) {
-//       fn();
-//       time = Date.now();
-//     }
-//   }
-// }
-
-// function typwriterText() {
-//   if(window.scrollY>= 300){
-//     document.getElementById('about-typewriter').innerHTML = 
-//      `<p class="line-1 anim-typewriter">
-//         Let's just put whatever we need to tell them.
-//       </p>`;
-//   }
-// }
-// //End scroll heightfunctionality for About typewriter animation

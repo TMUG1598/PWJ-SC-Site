@@ -16,7 +16,11 @@
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css" />
     <link
-      href="https://fonts.googleapis.com/css?family=Montserrat"
+      href="https://fonts.googleapis.com/css?family=Raleway"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Bebas+Neue"
       rel="stylesheet"
     />
   </head>
@@ -25,59 +29,55 @@
     
     <nav
       id="navbar-pwj"
-      class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark"
+      class="navbar navbar-expand-lg navbar-dark bg-dark"
     >
-      <a class="navbar-brand" href="#">PWJ Success Coaches</a>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#map">Welcome</a>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item">
-            <a class="nav-link" href="#coaches">Coaches</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#gallery">Gallery</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#calendar">Calendar</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#stuck">Got Stuck?</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#feedback">Got Feedback?</a>
-          </li>
-        </ul>
+      <div class="collapse navbar-collapse" id="navbarNav" data-aos="flip-up">
+        <div class="navbar-collapse collapse w-100 order-1 order-md-0">
+          <ul class="navbar-nav mr-auto ml-3">
+            <li class="nav-item active">
+              <a class="nav-link" href="#map">Welcome</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#gallery">Gallery</a>
+            </li>
+          </ul>
+        </div>
+        <div class="mx-auto order-0">
+          <a class="navbar-brand mx-auto" href="#" style="font-family: 'Bebas Neue';">PWJ Success Coaches</a>
+        </div>
+        <div class="navbar-collapse collapse w-100 order-3">
+          <ul class="navbar-nav ml-auto mr-3">
+            <li class="nav-item">
+              <a class="nav-link" href="https://jessica6m.github.io/Tutorials-SC-CP/" target="_blank">Video Sources</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
 
-   
-
-    <div id="welcome" class="bg-info text-light">
-      <div class="title">WELCOME</div>
-      <h1>TO THE PORTAL OF SUCCESS</h1>
-      <div>
-        <p>By the Success Coaches.<br />For the entire PWJ Community.</p>
+    <section id="welcome-section">
+      <div id="welcome" style="background: url('img/call.gif');">
+        <div class="container text-light d-flex flex-column justify-content-center align-items-center"
+        id="welcome-container">
+            <img src="img/JSC-logo.png" alt="" height="300px" style="margin-top: 1vh;" data-aos="zoom-out">
+            <h2 class="display-1" style="font-family: 'Bebas Neue';" data-aos="zoom-in">WELCOME!</h2>
+            <p data-aos="zoom-in">Connect with an available Profit with Javascript Success Coach below.</p>
+            <a class="btn btn-lg btn-dark" href="#coaches">Find A Success Coach Now</a>
+        </div>
       </div>
-    </div>
-    
-    <div id="map"></div>
-    <script
-      async
-      defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYVjVBlZbdj5N-FHtt67iBLImWRRKBnfk&callback=initMap"
-    ></script>
+    </section>
  
     <section id="about-section">
       <div
         id="about"
-        class="bg-warning text-dark d-flex flex-column justify-content-center align-items-center"
+        class="text-dark d-flex flex-column justify-content-center align-items-center"
         style="height: 100%;"
       >
         <div class="container">
-          <h1 data-aos="zoom-in">WHO ARE WE?</h1>
+          <h1 class="display-2" data-aos="zoom-in" style="font-family: 'Bebas Neue';">WHO ARE WE?</h1>
           <div data-aos="zoom-in">
             <p class="lead line-1">
               We are one of the best resources to help you make the most out of
@@ -86,7 +86,7 @@
             </p>
           </div>
 
-          <h1 data-aos="zoom-in">WHAT WILL YOU GET FROM US?</h1>
+          <h1 class="display-4" data-aos="zoom-in" style="font-family: 'Bebas Neue';">WHAT WILL YOU GET FROM US?</h1>
           <div class="row justify-content-center features">
             <div class="col-sm-6 col-md-5 col-lg-4 item" data-aos="fade-right">
               <div class="box">
@@ -136,9 +136,10 @@
         </div>
       </div>
     </section>
+
     <div id="coaches" class="text-center">
-      <h2 class="p-2 text-primary"><b>SUCCESS COACHES</b></h2>
-      <h5>
+      <h1 class="text-primary display-2" data-aos="zoom-in" style="font-family: 'Bebas Neue';"><b>LIST OF SUCCESS COACHES</b></h1>
+      <h5 data-aos="zoom-in">
         Please press the button below to see if the coach is available at the
         moment or if you would simply want to reach out to them.
       </h5>
@@ -170,52 +171,19 @@
         </div>
       </div>
     </div>
-<section>
-    <div
-      id="gallery"
-      class="bg-light text-center"
-      style="margin-top: 50px; height: 700px;"
-    >
-      <div>
-        <h2>Gallery of Coaches</h2>
-        <h5>Get to know the coaches more down below.</h5>
-      </div>
-      <div>
-        <button class="m-3 btn btn-dark" onclick="coachesGal(this)">
-          Unlock Gallery
-        </button>
-      </div>
-        <div class="tab" id="tab"></div>
+
+  <section>
+    <div id="gallery" class="bg-light text-center"
+      style="height: 700px;">
+      <h1 class="display-2" data-aos="zoom-in" style="font-family: 'Bebas Neue';">GET TO KNOW THE COACHES</h1>
+      <div class="m-3">
+        <div class="tab" id="tab" data-aos="flip-left"></div>
         <div class="tabcontent" id="tabcontent"></div>
-  </section>
-
-  <section id="calendar-section">
-    <div
-      id="calendar"
-      class="bg-primary text-light d-flex flex-column justify-content-center align-items-center"
-      style="height: 700px;"
-    >
-      <div>
-        <h1>Calendar</h1>
-        <p>Google Calendar API???</p>
       </div>
     </div>
   </section>
 
-  <section id="got-stuck-section"> 
-    <div
-      id="stuck"
-      class="bg-dark text-light d-flex flex-column justify-content-center align-items-center"
-      style="height: 700px;"
-    >
-      <div>
-        <h1>GOT STUCK?</h1>
-        <p>per module...</p>
-      </div>
-  </section> 
-    </div>
-
-    <section id="feedback-section">
+  <!-- <section id="feedback-section">
     <div
       id="feedback"
       class="bg-danger text-center text-white"
@@ -225,7 +193,7 @@
         <h2>You got any feedback?</h2>
         <h5>Use this form to share anything you would want the coaches to know.</h5>
          
-        <!-- <iframe class="airtable-embed" 
+        <iframe class="airtable-embed" 
                 src="https://airtable.com/embed/shrl0E1WWbZgN9UTb?"
                 frameborder="0" 
                 onmousewheel="" 
@@ -233,7 +201,7 @@
                 height="760" 
                 style="background: transparent; border: none;"
                 >
-            </iframe> -->
+            </iframe> 
 
         <div class="form-group d-flex flex-column justify-content-center align-items-center">
             <form id="feedbackForm" class="w-75">
@@ -246,18 +214,17 @@
                 <button type="submit" class="btn btn-light btn-outline secondary" id="Form-submit"> Submit </button>
             </form>
         </div>
+    </div>
+  </section>-->
 
+  <section id="footer-section">
+    <div class="container text-center text-dark">
+      <p class="m-5">This site was entirely coded from scratch by the success coaches. 
+        Word of warning, you do not need to code websites from scratch. 
+        It's not something we're entirely proud of! Updates coming soon with be.</p>
     </div>
   </section>
 
-  <section id="footer-section">
-    <p class="m-5">Footer and Credentials</p>
-  </section>
-  <script
-  async
-  defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-WA-lW3yDMdEIPpwm1rRTI_2aAPCS-yA&callback=initMap"
-></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
