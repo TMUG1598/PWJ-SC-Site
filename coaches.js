@@ -14,7 +14,7 @@ let coaches = [
       "diff": { "hours": -6, "minutes": 0 },
       "available": [9, 17],
       "profpic": "img/Kiska.jpg",
-      "description": "PROFILE STILL BEING CODED.",
+      "description": "I currently live in the USA, and more specifically Texas. I just graduated with my second Associate's degree. My first Associate's is an Associate's of Science with a minor in computer science and math! My second degree is an Associate's of Applied Science in Cosmetology. I was working as a hairstylist before COVID-19, however, I have always wanted to make my way back into the STEM field.  This course has and continues to give me the knowledge and community I need to advance into this field and Profit With JavaScript.",
       "slack": { "userId": "U011ZGK9T70", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" }
     },
     {
