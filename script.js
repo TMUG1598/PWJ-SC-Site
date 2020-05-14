@@ -61,7 +61,7 @@ openProfile = (btn, index) => {
   }
   btn.classList.toggle("active");
   document.getElementById("tabcontent").innerHTML = `
-        <div class="gallery-info" data-aos="zoom-in">
+        <div class="gallery-info text-light" data-aos="zoom-in">
             
             <div class="row"> 
                 <div class="col col-md-auto gallery-img-col"> 

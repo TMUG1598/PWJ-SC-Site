@@ -5,7 +5,7 @@ let coaches = [
       "diff": { "hours": -7, "minutes": 0 },
       "available": [9, 17],
       "profpic": "img/js-sample-pic.png",
-      "description": "I am me.",
+      "description": "PROFILE STILL BEING CODED.",
       "slack": { "userId": "U011EKCLJKE", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" }
     },
     {
@@ -14,7 +14,7 @@ let coaches = [
       "diff": { "hours": -6, "minutes": 0 },
       "available": [9, 17],
       "profpic": "img/js-sample-pic.png",
-      "description": "I am me.",
+      "description": "PROFILE STILL BEING CODED.",
       "slack": { "userId": "U011ZGK9T70", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" }
     },
     {
@@ -39,9 +39,9 @@ let coaches = [
       "name": "Jessica",
       "UTC": "-5",
       "diff": { "hours": -5, "minutes": 0 },
-      "available": [9, 17],
-      "profpic": "img/js-sample-pic.png",
-      "description": "I am me.",
+      "available": [0, 0],
+      "profpic": "img/Jessica.jpg",
+      "description": "Hey my name is Jessica Gross I'm from Brooklyn, New York. I am the winner of the JS Challenge :star-struck::tada::boom: and new to Profit with JavaScript!! I would say I am an intermediate level developer I know HTML, CSS, JavaScript, Java, Python. I have built web applications using Java's Spring framework. I am currently building projects using JavaScript like the Google Maps project I did for the contest and many others. I am currently learning Node. I am friendly outgoing gamer girl . I just started freelancing tutoring and mentoring. Reach out to me and I will try to help you as best as I can.",
       "slack": { "userId": "U011CNDCVSB", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" }
     },
     {
@@ -70,16 +70,16 @@ let coaches = [
       "diff": { "hours": 2, "minutes": 0 },
       "available": [9, 17],
       "profpic": "img/js-sample-pic.png",
-      "description": "I am me.",
+      "description": "PROFILE STILL BEING CODED.",
       "slack": { "userId": "U011B8BFZBR", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" }
     },
     {
       "name": "David",
       "UTC": "+2",
       "diff": { "hours": 2, "minutes": 0 },
-      "available": [9, 17],
-      "profpic": "img/js-sample-pic.png",
-      "description": "I am me.",
+      "available": [11, 23],
+      "profpic": "img/David.jpg",
+      "description": "Hey y'all, I'm David from the EU working as a product owner at a local bank, while also attending to college. I’ve been struggling with coding for years but finally I feel I am comfortable with it. Happy to help anyone!",
       "slack": { "userId": "U011LV52PMG", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" }
     },
     {
@@ -97,7 +97,7 @@ let coaches = [
       "diff": { "hours": 5, "minutes": 30 },
       "available": [9, 17],
       "profpic": "img/js-sample-pic.png",
-      "description": "I am me.",
+      "description": "PROFILE STILL BEING CODED.",
       "slack": { "userId": "U011D000RNZ", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" }
     },
     {
@@ -106,16 +106,16 @@ let coaches = [
       "diff": { "hours": 7, "minutes": 0 },
       "available": [9, 17],
       "profpic": "img/js-sample-pic.png",
-      "description": "I am me.",
+      "description": "PROFILE STILL BEING CODED.",
       "slack": { "userId": "U012DA935HA", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" }
     },
     {
       "name": "Pisoth",
       "UTC": "+7",
       "diff": { "hours": 7, "minutes": 0 },
-      "available": [9, 17],
-      "profpic": "img/js-sample-pic.png",
-      "description": "I am me.",
+      "available": [20, 22],
+      "profpic": "img/Pisoth.jpg",
+      "description": "I am a 16-year-old high school student who is passionate in coding and robotics. I am based in Cambodia. I have around 2 years of experience in robotics and I just started web development. Enrolling in PWJ is one of the best thing I did in my life and after I finish this course, I'll integrate web apps with robotics and create cool IOT automation projects. This is the best community ever and we'll learn and grow together.",
       "slack": { "userId": "U012ACS7FUG", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" }
     },
     {
@@ -131,7 +131,7 @@ let coaches = [
       "name": "Tatyana",
       "UTC": "+8",
       "diff": { "hours": 8, "minutes": 0 },
-      "available": [9, 17],
+      "available": [13, 24],
       "profpic": "img/Taty.jpg",
       "description": "Currently located in the Philippines, I graduated in Chemistry and Material Science Engineering. Coding has always been something I thought I could do but this is the first time I really feel like I belong in the digital world. I love algorithms, rubick's cubesss, coffee, and surfing! I've also been told I am a good teacher, no matter the subject! *wink*",
       "slack": { "userId": "U012BAWNUG5", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" }
