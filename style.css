@@ -90,7 +90,8 @@ a {
   background-color: #f1f1f1;
   width: 20%;
   max-height: 400px;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .tab button {
@@ -128,7 +129,8 @@ a {
   border: 1px solid #ccc;
   width: 80%;
   border-left: none;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 /* this is the animation code for typewriter animation  */
@@ -202,8 +204,7 @@ a {
 }
 
 .gallery-info-desc {
-  height: 400px;
-  overflow-y: scroll;
+  height: auto;
   /* padding-left: 0; */
   /* padding-left: 30px; */
   /* margin-right: 0px;

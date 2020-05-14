@@ -105,8 +105,8 @@ let coaches = [
       "UTC": "+7",
       "diff": { "hours": 7, "minutes": 0 },
       "available": [9, 17],
-      "profpic": "img/js-sample-pic.png",
-      "description": "PROFILE STILL BEING CODED.",
+      "profpic": "img/Van.jpg",
+      "description": "Greeting Lovely People, I am Van Thong and my nickname is Eternal Purity. I am Vietnamese, I love learning traditional culture, I love Chinese Classical Dance, Shen Yun, Photograph. I always behave people openly, but behave myself strictly. One of my goals in life is to blow pure, beautiful soul into Software.",
       "slack": { "userId": "U012DA935HA", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" }
     },
     {
