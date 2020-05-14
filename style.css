@@ -175,7 +175,7 @@ a {
 /*Coaches Gallery Animation*/
 .arrow-icon {
   animation: sld-left 2s infinite;
-  color: #378ebf;
+  color: white;
 }
 
 @keyframes sld-left {
@@ -195,6 +195,10 @@ a {
   padding-bottom: 50px;
   height: 400px;
   text-align: left;
+}
+
+#gallery h2 {
+  color: white;
 }
 
 .gallery-info-desc {
