@@ -13,7 +13,7 @@ let coaches = [
       "UTC": "-6",
       "diff": { "hours": -6, "minutes": 0 },
       "available": [9, 17],
-      "profpic": "img/js-sample-pic.png",
+      "profpic": "img/Kiska.jpg",
       "description": "PROFILE STILL BEING CODED.",
       "slack": { "userId": "U011ZGK9T70", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" }
     },
@@ -68,9 +68,9 @@ let coaches = [
       "name": "Abdou",
       "UTC": "+2",
       "diff": { "hours": 2, "minutes": 0 },
-      "available": [9, 17],
-      "profpic": "img/js-sample-pic.png",
-      "description": "PROFILE STILL BEING CODED.",
+      "available": [18, 22],
+      "profpic": "img/Abdou.jpg",
+      "description": "Hi guys, im Abdou. Just like you I started to learn coding (Next to stressful a 40-50h/week full-time job) with no experience and no clue on where to start and what to do. After trying many different things I finally found a strategy to follow. Following this strategy made me 'Job ready' in 7 months. Building a great routine and using some techniques really helped me to be able to learn next to a fulltime-job. I'm now working at one of the greatest companies i've ever seen in Germany. Also very much interested in personal development, fitness and stuff like this. Favourite Book: Can't Hurt me - David Goggings; Technologies: React, React Native, Node.js",
       "slack": { "userId": "U011B8BFZBR", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" }
     },
     {
