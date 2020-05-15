@@ -95,9 +95,9 @@ let coaches = [
       "name": "Gaurav",
       "UTC": "+5:30",
       "diff": { "hours": 5, "minutes": 30 },
-      "available": [9, 17],
-      "profpic": "img/js-sample-pic.png",
-      "description": "PROFILE STILL BEING CODED.",
+      "available": [19,22],
+      "profpic": "img/gaurav.png",
+      "description": "Located in India! A web developer by profession having close to 7 years of experience. <br> I enjoy sharing my knowledge and experience with those who seek! <br>PWJ has given a an amazing platform to connect with people from all walks of life. Looking forward to start my journey as a tutor and a freelancer.",
       "slack": { "userId": "U011D000RNZ", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" }
     },
     {
