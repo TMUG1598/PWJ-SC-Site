@@ -1,3 +1,10 @@
+scrollBar = () => {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+
 showCoaches = () => {
   let cards = "";
   coaches.forEach(coach => {
@@ -18,7 +25,7 @@ getCoachCardTemplate = (coach) => {
                   <div class="icon">${checkStatus(coach)}</div>
                 </div>
               </div>
-              <h4 class="card-subtitle mb-2 text-muted">${displayTimeNow(coach)}${coach["UTC"]}</h4>
+              <h6 class="card-subtitle mb-2 text-muted">${displayTimeNow(coach)}${coach["UTC"]}</h6>
               <p class="card-text"></p>
               <a class="text-primary" href= ${coach["slack"].profileSearchUrl}${coach["slack"].userId} target="_blank">
                   Open ${coach["name"]}'s <i class="fab fa-slack"></i> Profile
@@ -95,10 +102,14 @@ createCoachesGallery = () => {
 
 let intervalId;
 window.onload = function () {
+  scrollBar();
   createCoachesGallery();
   showCoaches();
   AOS.refresh();
-  intervalId = setInterval(() => showCoaches(), 1000);
+  intervalId = setInterval(() => {
+    showCoaches();
+  }, 1000);
+  setInterval(() => scrollBar(), 200);
 };
 
 window.onbeforeunload = () => {

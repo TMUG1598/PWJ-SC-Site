@@ -1,14 +1,5 @@
 let coaches = [
     {
-      "name": "Fizan",
-      "UTC": "-7",
-      "diff": { "hours": -7, "minutes": 0 },
-      "available": [9, 17],
-      "profpic": "img/js-sample-pic.png",
-      "description": "PROFILE STILL BEING CODED.",
-      "slack": { "userId": "U011EKCLJKE", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" }
-    },
-    {
       "name": "Kiska",
       "UTC": "-6",
       "diff": { "hours": -6, "minutes": 0 },
@@ -34,15 +25,6 @@ let coaches = [
       "profpic": "img/Usman.jpg",
       "description": "I am QA Automation Tester &  Becoming Full Stack Developer very soon. I am in EST time zone. I am good in HTML, CSS, JSON, and JS and my available time 10 am est to 18 est (14 est to 14:30 est is exception)",
       "slack": { "userId": "U0132DUPHCY", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" }
-    },
-    {
-      "name": "Jessica",
-      "UTC": "-5",
-      "diff": { "hours": -5, "minutes": 0 },
-      "available": [0, 0],
-      "profpic": "img/Jessica.jpg",
-      "description": "Hey my name is Jessica Gross I'm from Brooklyn, New York. I am the winner of the JS Challenge :star-struck::tada::boom: and new to Profit with JavaScript!! I would say I am an intermediate level developer I know HTML, CSS, JavaScript, Java, Python. I have built web applications using Java's Spring framework. I am currently building projects using JavaScript like the Google Maps project I did for the contest and many others. I am currently learning Node. I am friendly outgoing gamer girl . I just started freelancing tutoring and mentoring. Reach out to me and I will try to help you as best as I can.",
-      "slack": { "userId": "U011CNDCVSB", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" }
     },
     {
       "name": "Rishi",
