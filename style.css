@@ -6,6 +6,10 @@ body {
   overflow-x: hidden;
 }
 
+h6 {
+  font-size: 15px;
+}
+
 #navbar-div {
   position: fixed;
   z-index: 1;
@@ -49,7 +53,6 @@ body {
 
 .container-fluid h1 {
   text-align: center;
-  padding-top: 50px;
   padding-bottom: 10px;
   font-weight: bold;
 }
@@ -92,15 +95,19 @@ a {
 #about {
   background-color: #378ebf !important;
   color: white !important;
+  padding-top: 10vh;
 }
 
 #coaches {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding: 10vh 0;
 }
 
 #gallery {
-  padding: 100px;
+  padding: 10vh;
+}
+
+#feedback {
+  padding: 10vh 10vh;
 }
 
 .tab {
@@ -127,21 +134,18 @@ a {
   transition: all 0.3s ease-in-out;
 }
 
-/* Change background color of buttons on hover */
 .tab button:hover {
   background-color: #0275d8;
   color: white;
   border-radius: 10px;
 }
 
-/* Create an active/current "tab button" class */
 .tab button.active {
   background-color: #0275d8;
   color: white;
   border-radius: 10px;
 }
 
-/* Style the tab content */
 .tabcontent {
   float: left;
   padding: 0px 12px;
@@ -218,7 +222,7 @@ a {
   text-align: left;
 }
 
-#gallery h2 {
+#gallery h1 {
   color: white;
 }
 
