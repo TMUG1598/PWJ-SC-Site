@@ -102,15 +102,13 @@ createCoachesGallery = () => {
 
 let intervalId;
 window.onload = function () {
-  scrollBar();
   createCoachesGallery();
   showCoaches();
   AOS.refresh();
-  intervalId = setInterval(() => {
-    showCoaches();
-  }, 1000);
-  setInterval(() => scrollBar(), 200);
+  intervalId = setInterval(() => showCoaches(), 1000);
 };
+
+window.onscroll = function() {scrollBar()};
 
 window.onbeforeunload = () => {
   clearInterval(intervalId);
