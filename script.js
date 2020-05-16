@@ -96,6 +96,8 @@ createCoachesGallery = () => {
 let intervalId;
 window.onload = function () {
   createCoachesGallery();
+  showCoaches();
+  AOS.refresh();
   intervalId = setInterval(() => showCoaches(), 1000);
 };
 
