@@ -15,15 +15,13 @@ showCoaches = () => {
 
 getCoachCardTemplate = (coach) => {
   let html = `
-          <div class="card" style="width: 300px; margin: 10px">
+          <div class="card" style="width: 400px; margin: 10px">
             <div class="card-body">
-              <div class="row">
-                <div class="col-8">
-                  <h2 class="card-title display-4" style="font-family: 'Bebas Neue';">${coach.name}</h2>
-                </div>
-                <div class="col-4">
-                  <div class="icon">${checkStatus(coach)}</div>
-                </div>
+              <div class="d-flex justify-content-between">
+                  <h3 class="card-title display-4" style="font-family: 'Bebas Neue';">${coach.name}</h3>
+                  <div style="width: 100px; height: 100px; border-radius: 50%; overflow: hidden;">
+                    <img src=${coach.profpic} alt="" width="100px"></img>
+                  </div>
               </div>
               <h6 class="card-subtitle mb-2 text-muted">${displayTimeNow(coach)}${coach["UTC"]}</h6>
               <p class="card-text"></p>
