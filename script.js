@@ -17,8 +17,8 @@ getCoachCardTemplate = (coach) => {
   let html = `
           <div class="card" style="width: 400px; margin: 10px">
             <div class="card-body">
-              <div class="d-flex justify-content-between">
-                  <h3 class="card-title display-4" style="font-family: 'Bebas Neue';">${coach.name}</h3>
+              <div class="d-flex justify-content-between align-items-center">
+                  <h2 class="card-title display-4" style="font-family: 'Bebas Neue';">${coach.name}</h2>
                   <div style="width: 100px; height: 100px; border-radius: 50%; overflow: hidden;">
                     <img src=${coach.profpic} alt="" width="100px"></img>
                   </div>
