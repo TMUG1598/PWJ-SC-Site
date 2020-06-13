@@ -1,6 +1,7 @@
 let coaches = [
     {
       "name": "Daniel",
+      "country": "USA",
       "UTC": "-7",
       "diff": { "hours": -7, "minutes": 0 },
       "available": [11, 18],
@@ -9,10 +10,12 @@ let coaches = [
       "slack": { "userId": "U011XATCABU", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" },
       "skills":"HTML, CSS, JavaScript, DOM, Git, GitHub",
       "rating": "⭐⭐⭐⭐",
-      "clients": 5
+      "clients": 5,
+      "setmore":"https://djimenezjsdev.setmore.com",
     },
     {
       "name": "Kiska",
+      "country": "USA",
       "UTC": "-6",
       "diff": { "hours": -6, "minutes": 0 },
       "available": [9, 17],
@@ -21,10 +24,12 @@ let coaches = [
       "slack": { "userId": "U011ZGK9T70", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" },
       "skills":"HTML, CSS, JavaScript, DOM, Git, GitHub",
       "rating": "⭐⭐⭐⭐",
-      "clients": 5
+      "clients": 5,
+      "setmore":"https://kiskasanchez.setmore.com/",
     },
     {
       "name": "Jenn",
+      "country": "USA",
       "UTC": "-5",
       "diff": { "hours": -5, "minutes": 0 },
       "available": [9, 17],
@@ -33,10 +38,12 @@ let coaches = [
       "slack": { "userId": "U012QP89WTB", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" },
       "skills":"HTML, CSS, JavaScript, DOM, Git, GitHub",
       "rating": "⭐⭐⭐⭐",
-      "clients": 5
+      "clients": 5,
+      "setmore":"https://jennmaher.setmore.com",
     },
     {
       "name": "Usman",
+      "country": "USA",
       "UTC": "-5",
       "diff": { "hours": -5, "minutes": 0 },
       "available": [10, 18],
@@ -45,10 +52,12 @@ let coaches = [
       "slack": { "userId": "U0132DUPHCY", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" },
       "skills":"HTML, CSS, JavaScript, DOM, Git, GitHub",
       "rating": "⭐⭐⭐⭐",
-      "clients": 5
+      "clients": 5,
+      "setmore":"",
     },
     {
       "name": "Elvis",
+      "country": "USA",
       "UTC": "-4",
       "diff": { "hours": -4, "minutes": 0 },
       "available": [17, 22],
@@ -57,10 +66,27 @@ let coaches = [
       "slack": { "userId": "U012MFM6C20", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" },
       "skills":"HTML, CSS, JavaScript, DOM, Git, GitHub",
       "rating": "⭐⭐⭐⭐",
-      "clients": 5
+      "clients": 5,
+      "setmore":"https://elvism.setmore.com/",
+    },
+    {
+      "name": "Joe",
+      "country": "USA",
+      "UTC": "-4",
+      "diff": { "hours": -4, "minutes": 0 },
+      "available": [9, 17],
+      "profpic": "img/Joe.jpg",
+      "description":
+        "Based out of CT USA, originally from Mumbai India. I live here with my wife and three beautful daughters. I been programming for a while now began my career programming in GW Basic and progressed to VB6/VBA MSSQL Server and other MS technologies. JavaSctipt still amazes me its such a great language because all you need to write code is notepad and you can create working apps in minutes. I joined PWJS course to learn some cool web technologies that allow us to create cool looking apps in minutes. This course and teh wonderful member community provides me the perfect paltform to hone both my programming and my soft skiils and hopefully make some money in the process. I am passionate about helping others with their coding questions becasue it not only helps me soldify my understanding about the concepts but also  learn from their mistakes.",
+      "slack": { "userId": "U014J9XJP2R", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" },
+      "skills":"HTML, CSS, JavaScript, DOM, Git, GitHub",
+      "rating": "⭐⭐⭐⭐",
+      "clients": 5,
+      "setmore":"https://cleverprogrammer.setmore.com/resourcebookingpage/r2d785bd92547fd075cfc2056d343cf98cfa61fa9"
     },
     {
       "name": "Rishi",
+      "country": "Canada",
       "UTC": "-4",
       "diff": { "hours": -4, "minutes": 0 },
       "available": [9, 17],
@@ -70,10 +96,12 @@ let coaches = [
       "slack": { "userId": "U0123Q83D6X", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" },
       "skills":"HTML, CSS, JavaScript, DOM, Git, GitHub",
       "rating": "⭐⭐⭐⭐",
-      "clients": 5
+      "clients": 5,
+      "setmore":"https://cleverprogrammer4508.setmore.com/resourcebookingpage/r1e29f2cec07a073a54aed396ae020606d1592e0d",
     },
     {
       "name": "Aziz",
+      "country": "Tunisia",
       "UTC": "+1",
       "diff": { "hours": 1, "minutes": 0 },
       "available": [20, 23],
@@ -83,10 +111,12 @@ let coaches = [
       "slack": { "userId": "U012REL2XCL", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" },
       "skills":"HTML, CSS, JavaScript, DOM, Git, GitHub",
       "rating": "⭐⭐⭐⭐",
-      "clients": 5
+      "clients": 5,
+      "setmore":"https://webdevelopmenttutoring.setmore.com/"
     },
     {
       "name": "Hardeep",
+      "country": "UK",
       "UTC": "+1",
       "diff": { "hours": 1, "minutes": 0 },
       "available": [17, 23],
@@ -96,10 +126,12 @@ let coaches = [
       "slack": { "userId": "U01391Z5LKS", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" },
       "skills":"HTML, CSS, JavaScript, DOM, Git, GitHub",
       "rating": "⭐⭐⭐⭐",
-      "clients": 5
+      "clients": 5,
+      "setmore":"https://hardeep.setmore.com/"
     },
     {
       "name": "Youssef",
+      "country": "Tunisia",
       "UTC": "+1",
       "diff": { "hours": 1, "minutes": 0 },
       "available": [9, 17],
@@ -109,10 +141,12 @@ let coaches = [
       "slack": { "userId": "U012C8ZKXNF", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" },
       "skills":"HTML, CSS, JavaScript, DOM, Git, GitHub",
       "rating": "⭐⭐⭐⭐",
-      "clients": 5
+      "clients": 5,
+      "setmore":"",
     },
     {
       "name": "Abdou",
+      "country": "Germany",
       "UTC": "+2",
       "diff": { "hours": 2, "minutes": 0 },
       "available": [18, 22],
@@ -121,10 +155,12 @@ let coaches = [
       "slack": { "userId": "U011B8BFZBR", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" },
       "skills":"HTML, CSS, JavaScript, DOM, Git, GitHub",
       "rating": "⭐⭐⭐⭐",
-      "clients": 5
+      "clients": 5,
+      "setmore":"",
     },
     {
       "name": "David",
+      "country": "Europe",
       "UTC": "+2",
       "diff": { "hours": 2, "minutes": 0 },
       "available": [11, 23],
@@ -133,10 +169,12 @@ let coaches = [
       "slack": { "userId": "U011LV52PMG", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" },
       "skills":"HTML, CSS, JavaScript, DOM, Git, GitHub",
       "rating": "⭐⭐⭐⭐",
-      "clients": 5
+      "clients": 5,
+      "setmore":"https://davidrakosi.setmore.com/resourcebookingpage/ra0aee687a1672eb41dd455a103853ef51b085e1d",
     },
     {
       "name": "Muizz",
+      "country": "Germany",
       "UTC": "+2",
       "diff": { "hours": 2, "minutes": 0 },
       "available": [9, 17],
@@ -145,10 +183,12 @@ let coaches = [
       "slack": { "userId": "U011ZTC6SEM", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" },
       "skills":"HTML, CSS, JavaScript, DOM, Git, GitHub",
       "rating": "⭐⭐⭐⭐",
-      "clients": 5
+      "clients": 5,
+      "setmore" : "https://muizzbolaji.setmore.com",
     },
     {
       "name": "Amaanath",
+      "country": "Sri Lanka",
       "UTC": "+5:30",
       "diff": { "hours": 5, "minutes": 30 },
       "available": [7,11],
@@ -157,10 +197,12 @@ let coaches = [
       "slack": { "userId": "U012R4DG6JW", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" },
       "skills":"HTML, CSS, JavaScript, DOM, Git, GitHub",
       "rating": "⭐⭐⭐⭐",
-      "clients": 5
+      "clients": 5,
+      "setmore":"https://technerdinc.setmore.com/resourcebookingpage/r26bb4a7b9dc7834577c1b60b7ddf516cd87a8b6c",
     },
     {
       "name": "Gaurav",
+      "country": "India",
       "UTC": "+5:30",
       "diff": { "hours": 5, "minutes": 30 },
       "available": [19,22],
@@ -169,10 +211,12 @@ let coaches = [
       "slack": { "userId": "U011D000RNZ", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" },
       "skills":"HTML, CSS, JavaScript, DOM, Git, GitHub",
       "rating": "⭐⭐⭐⭐",
-      "clients": 5
+      "clients": 5,
+      "setmore":"",
     },
     {
       "name": "Soumyadeep",
+      "country": "India",
       "UTC": "+5:30",
       "diff": { "hours": 5, "minutes": 30 },
       "available": [9,15],
@@ -181,10 +225,12 @@ let coaches = [
       "slack": { "userId": "U011PHJJ03V", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" },
       "skills":"HTML, CSS, JavaScript, DOM, Git, GitHub",
       "rating": "⭐⭐⭐⭐",
-      "clients": 5
+      "clients": 5,
+      "setmore":"https://soumyadeeppaul.setmore.com/resourcebookingpage/rd3f4403a3763f6e13cb28479cec25f1dc60b2d19",
     },
     {
       "name": "Van",
+      "country": "Vietnam",
       "UTC": "+7",
       "diff": { "hours": 7, "minutes": 0 },
       "available": [9, 17],
@@ -193,10 +239,12 @@ let coaches = [
       "slack": { "userId": "U012DA935HA", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" },
       "skills":"HTML, CSS, JavaScript, DOM, Git, GitHub",
       "rating": "⭐⭐⭐⭐",
-      "clients": 5
+      "clients": 5,
+      "setmore":"",
     },
     {
       "name": "Pisoth",
+      "country": "Cambodia",
       "UTC": "+7",
       "diff": { "hours": 7, "minutes": 0 },
       "available": [20, 22],
@@ -205,10 +253,12 @@ let coaches = [
       "slack": { "userId": "U012ACS7FUG", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" },
       "skills":"HTML, CSS, JavaScript, DOM, Git, GitHub",
       "rating": "⭐⭐⭐⭐",
-      "clients": 5
+      "clients": 5,
+      "setmore":"https://pisothyi.setmore.com",
     },
     {
       "name": "Damir",
+      "country": "China",
       "UTC": "+8",
       "diff": { "hours": 8, "minutes": 0 },
       "available": [9, 13], 
@@ -217,10 +267,12 @@ let coaches = [
       "slack": { "userId": "U011CNAAEP9", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" },
       "skills":"HTML, CSS, JavaScript, DOM, Git, GitHub",
       "rating": "⭐⭐⭐⭐",
-      "clients": 5
+      "clients": 5,
+      "setmore":"https://damir7851.setmore.com/resourcebookingpage/r78dc1ba45641b233099db2842d24a5a7f175b74b"
     },
     {
       "name": "Tatyana",
+      "country": "Philippines",
       "UTC": "+8",
       "diff": { "hours": 8, "minutes": 0 },
       "available": [13, 24],
@@ -229,10 +281,12 @@ let coaches = [
       "slack": { "userId": "U012BAWNUG5", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" },
       "skills":"HTML, CSS, JavaScript, DOM, Git, GitHub",
       "rating": "⭐⭐⭐⭐",
-      "clients": 5
+      "clients": 5,
+      "setmore":"https://tatyanajscoaching.setmore.com/",
     },
     {
       "name": "Ushan",
+      "country": "New Zealand",
       "UTC": "+12",
       "diff": { "hours": 12, "minutes": 0 },
       "available": [20, 23], 
@@ -241,6 +295,7 @@ let coaches = [
       "slack": { "userId": "U0119RT1A5P", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" },
       "skills":"HTML, CSS, JavaScript, DOM, Git, GitHub",
       "rating": "⭐⭐⭐⭐",
-      "clients": 5
+      "clients": 5,
+      "setmore":"",
     }
   ]
