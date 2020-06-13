@@ -1,3 +1,34 @@
+showCoaches = () => {
+  let cards = "";
+  coaches.forEach((coach) => {
+    cards += getCoachCardTemplate(coach);
+  });
+  document.getElementById("coach-card").innerHTML = cards;
+};
+
+getCoachCardTemplate = (coach) => {
+  let html = `
+          <div class="card" style="width: 400px; margin: 10px" data-aos="zoom-in-up">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center">
+                  <a class="text-dark" href=#${coach.name}><h2 class="text-dark">${coach.name}</h2></a>
+                  <a class="text-primary" href=#${coach.name}>
+                      <div style="width: 100px; height: 100px; border-radius: 50%; overflow: hidden;">
+                          <img src=${coach.profpic} alt="" width="100px"></img>
+                      </div>
+                  </a>
+              </div>
+              <p class="card-subtitle text-muted">${coach.country} (GMT${coach.UTC})</p>
+              <a class="text-primary" href=#${coach.name}><p>Know More About ${coach.name}</p></a>
+              <a class="text-info" href= ${coach["slack"].profileSearchUrl}${coach["slack"].userId} target="_blank">
+                  <p>Open ${coach["name"]}'s <i class="fab fa-slack"></i> Profile</p>
+              </a>
+            </div>
+          </div>
+        `;
+  return html;
+};
+
 displayCoachSlide = () => {
   setTimeout(() => {
     var mySwiper = new Swiper(".swiper-container", {
@@ -25,25 +56,46 @@ displayCoachSlide = () => {
       },
     });
   }, 0);
-  let slidesHTML = "";
+  let slidesHTML = `
+    <div class="p-5 swiper-slide d-flex flex-column align-items-center justify-content-center text-center" data-aos="zoom-out">
+        <h1>Learn more about<br> the coaches<br> here!</h1>
+        <h2 class="text-info">Use the arrows on the sides</h2>
+    </div>
+  `;
   coaches.forEach((coach) => {
     slidesHTML += `
-        <div class="swiper-slide">
-          <div class="coach-info-container">
-            <div class="profile-picture" style="background-image: url(${coach.profpic})"></div>
-            <div class="coach-info">
-              <h1>${coach.name}</h1>
-              <p>${coach.description}</p>
+        <div class="p-5 swiper-slide d-flex align-items-start justify-content-center" id=${coach.name} data-aos="zoom-out">
+            <div class="coach-info-container">
+              <div class="profile-picture" style="background-image: url(${coach.profpic})"></div>
+              <div class="coach-info">
+                <h1>${coach.name}</h1>
+                <p>${coach.description}</p>
+              </div>
             </div>
-          </div>
-          <div class="skill-container">
-            skill
-          </div>
+            <div class="skill-container">
+                <h2>Statistics</h2>
+                <p><span>Skills:</span> ${coach.skills}</p>
+                <p><span>Rating:</span> ${coach.rating}</p>
+                <p><span>Clients:</span> ${coach.clients}</p>
+                ${bookingCall(coach)}
+            </div>
         </div>
     `;
   });
   document.querySelector(".swiper-wrapper").innerHTML = slidesHTML;
 };
+
+bookingCall = (coach) => {
+  if (coach.setmore === "") {
+      return `<button class="btn btn-lg btn-dark">Book a Coaching Call Now</button>`;
+  } else {
+      return `
+      <a href=${coach.setmore} target="_blank">
+          <button class="btn btn-lg btn-info">Book a Coaching Call Now</button>
+      </a>
+      `;
+  }
+}
 
 scrollBar = () => {
   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -54,128 +106,13 @@ scrollBar = () => {
   document.getElementById("myBar").style.width = scrolled + "%";
 };
 
-showCoaches = () => {
-  let cards = "";
-  coaches.forEach((coach) => {
-    cards += getCoachCardTemplate(coach);
-  });
-  document.getElementById("coach-card").innerHTML = cards;
-};
-
-getCoachCardTemplate = (coach) => {
-  let html = `
-          <div class="card" style="width: 400px; margin: 10px">
-            <div class="card-body">
-              <div class="d-flex justify-content-between align-items-center">
-                  <h2 class="card-title display-4" style="font-family: 'Bebas Neue';">${coach.name}</h2>
-                  <div style="width: 100px; height: 100px; border-radius: 50%; overflow: hidden;">
-                    <img src=${coach.profpic} alt="" width="100px"></img>
-                  </div>
-              </div>
-              <h6 class="card-subtitle mb-2 text-muted">${displayTimeNow(
-                coach
-              )}${coach["UTC"]}</h6>
-              <p class="card-text"></p>
-              <a class="text-primary" href= ${coach["slack"].profileSearchUrl}${
-    coach["slack"].userId
-  } target="_blank">
-                  Open ${coach["name"]}'s <i class="fab fa-slack"></i> Profile
-              </a>
-            </div>
-          </div>
-        `;
-  return html;
-};
-
-checkStatus = (coach) => {
-  let date = new Date();
-  date.setHours(date.getHours() + coach["diff"].hours);
-  date.setMinutes(date.getMinutes() + coach["diff"].minutes);
-  var hour = date.getUTCHours();
-
-  if (hour >= coach["available"][0] && hour < coach["available"][1]) {
-    return `<div class="text-primary"><i class="fas fa-thumbs-up"></i></div>`;
-  } else {
-    return `<div class="text-danger"><i class="fas fa-bed"></i></div>`;
-  }
-};
-
-displayTimeNow = (coach) => {
-  let date = new Date();
-  date.setHours(date.getHours() + coach["diff"].hours);
-  date.setMinutes(date.getMinutes() + coach["diff"].minutes);
-  var n = date.toUTCString();
-
-  return n;
-};
-
-openProfile = (btn, index) => {
-  let tabName = document.getElementsByClassName("tabname");
-  for (let i = 0; i < tabName.length; i++) {
-    if (tabName[i].classList.contains("active") == true) {
-      tabName[i].classList.remove("active");
-    }
-  }
-  btn.classList.toggle("active");
-  document.getElementById("tabcontent").innerHTML = `
-        <div class="gallery-info text-light" data-aos="zoom-in">
-            
-            <div class="row"> 
-                <div class="col col-md-auto gallery-img-col"> 
-                    <img class="img-thumbnail" src=${coaches[index]["profpic"]} alt="" width="380px" ></img>
-                </div>
-
-                <div class="col gallery-info-desc"> 
-
-              
-                <div id="mySidenav" class="sidenav">
-                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                  <a href="#"><span>Our Stats</span></a>
-                  <a href="#"><span>Skills:</span> ${coaches[index]['skills']}</a>
-                  <a href="#"><span>Rating:</span> ${coaches[index]['rating']}</a>
-                  <a href="#"><span>Clients:</span> ${coaches[index]['clients']}</a>
-                </div>
-                    <h1 class = "gallery-header">${coaches[index]["name"]}</h1>
-                    <button type = "button" class = "btn  btn-info btn-stats" onclick="openNav()">Click To see stats</button>
-                    <span class = "gallery-desc">${coaches[index]["description"]}</span>
-                </div>
-            </div>
-        </div>
-    `;
-};
-
-/* Set the width of the side navigation to 250px */
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-}
-
-/* Set the width of the side navigation to 0 */
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
-
-createCoachesGallery = () => {
-  let coachGallerylist = [];
-  coaches.forEach((coach, index) => {
-    coachGallerylist += `<button class="tabname tablinks" onclick="openProfile(this, ${index})">${coach.name}</button>`;
-  });
-
-  document.getElementById("tab").innerHTML = coachGallerylist;
-  let arrow = "<i class='fas fa-arrow-circle-left arrow-icon'></i>".repeat(3);
-  document.getElementById("tabcontent").innerHTML = `
-        <div class="d-flex flex-column justify-content-center align-items-center" style="height: 400px;">
-            <h1 class="text-primary display-1">${arrow}</h1>
-        </div>
-        `;
-};
 
 let intervalId;
 window.onload = function () {
-  displayCoachSlide();
-  createCoachesGallery();
   showCoaches();
   AOS.refresh();
-  intervalId = setInterval(() => showCoaches(), 1000);
+  // intervalId = setInterval(() => showCoaches(), 1000);
+  displayCoachSlide();
 };
 
 window.onscroll = function () {
@@ -185,5 +122,3 @@ window.onscroll = function () {
 window.onbeforeunload = () => {
   clearInterval(intervalId);
 };
-
-//Check if time if available

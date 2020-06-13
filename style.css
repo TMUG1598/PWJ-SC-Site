@@ -1,22 +1,90 @@
-body {
-  font: 20px Raleway, sans-serif;
-  height: 100vh;
-  margin: 0;
+h1, h2, h3, p {
   padding: 0;
-  overflow-x: hidden;
+  margin: 0;
 }
 
-h6 {
-  font-size: 15px;
+h1, h2, h3 {
+  font-family: 'Bebas Neue';
 }
 
-#navbar-div {
-  position: fixed;
-  z-index: 1;
+h1 {
+  margin: 5px 0;
+  font-size: 5rem;
+}
+
+h2 {
+  margin: 5px 0;
+  font-size: 3.5rem;
+}
+
+h3 {
+  margin: 5px 0;
+  font-size: 2rem;
+}
+
+p, .nav-link {
+  font-family: Raleway, sans-serif;
+  font-size: large;
+  margin: 10px 0;
+}
+
+.btn {
+  font-family: 'Bebas Neue';
+  font-size: 2rem;
+}
+
+.swiper-container {
   width: 100vw;
+  min-height: 450px;
+}
+
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.coach-info-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 20px;
+}
+
+.profile-picture {
+  background-color: red;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin: 10px 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.coach-info {
+  padding: 20px;
+  max-width: 500px;
+}
+
+.coach-info p {
+  width: 100%;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.skill-container {
+  padding: 20px;
+  width: 350px;
 }
 
 .progress-container {
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
   width: 100%;
   height: 8px;
   background: #f7f7f7;
@@ -28,327 +96,48 @@ h6 {
   width: 0%;
 }
 
-#welcome {
-  height: 97vh;
-  width: 100%;
-}
-
-#welcome-container {
-  background-color: rgb(58, 56, 56, 0.8);
-  width: 700px;
-  height: 100%;
-  padding-top: 8vh;
-}
-
-.container-fluid i {
-  font-size: 50px;
-  padding-bottom: 20px;
-}
-
-.icon i {
-  font-size: 40px;
-  padding-bottom: 20px;
-  align-self: flex-end;
-}
-
-.container-fluid h1 {
-  text-align: center;
-  padding-bottom: 10px;
-  font-weight: bold;
-}
-
-.row .item {
-  text-align: center;
-  margin: 30px;
-  padding: 30px;
-  background: white;
-  color: #3a3838;
-  border-radius: 5px;
-  height: 420px;
-  max-width: 300px;
-}
-
-.title {
-  font-size: 70px;
-}
-
-main {
-  background-color: white;
-}
-h1 {
-  margin: 10px;
-}
-
-a {
-  color: black;
-  text-decoration: none;
-}
-
-.nav-link:hover {
-  color: white;
-  background-color: gray;
-  text-decoration: none;
-  padding: 8px;
-  border-radius: 10px;
-}
-
-#about {
-  background-color: #378ebf !important;
-  color: white !important;
-  padding-top: 10vh;
-}
-
-#coaches {
-  padding: 10vh 0;
-}
-
-#gallery {
-  padding: 10vh;
-}
-
-#feedback {
-  padding: 10vh 10vh;
-}
-
-.tab {
-  float: left;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
-  width: 20%;
-  max-height: 400px;
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
-
-.tab button {
-  display: block;
-  background-color: inherit;
-  color: black;
-  padding: 25px;
-  width: 100%;
-  border: none;
-  outline: none;
-  text-align: center;
-  cursor: pointer;
-  margin-bottom: 10px;
-  transition: all 0.3s ease-in-out;
-}
-
-.tab button:hover {
-  background-color: #0275d8;
-  color: white;
-  border-radius: 10px;
-}
-
-.tab button.active {
-  background-color: #0275d8;
-  color: white;
-  border-radius: 10px;
-}
-
-.tabcontent {
-  float: left;
-  padding: 0px 0px 0px 12px;
-  border: 1px solid #ccc;
-  width: 80%;
-  border-left: none;
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
-
-/* this is the animation code for typewriter animation  */
-
-/* Google Fonts */
-@import url(https://fonts.googleapis.com/css?family=Anonymous);
-
-.line-1 {
-  position: relative;
-  top: 50%;
-  /* width: 40em; */
-  margin: 0 auto;
-  /* border-right: 2px solid rgba(255, 255, 255, 0.75); */
-  font-size: 140%;
-  text-align: center;
-  max-width: 750px;
-  /* white-space: nowrap; */
-  overflow: hidden;
-  /* transform: translateY(-50%); */
-}
-
-/* Animation */
-/* .anim-typewriter {
-  animation: typewriter 4s steps(44) 1s 1 normal both,
-    blinkTextCursor 500ms steps(44) infinite normal;
-}
-@keyframes typewriter {
-  from {
-    width: 0;
+@media (max-width: 1500px) {
+  .coach-info, .skill-container {
+      padding: 5px 20px;
+      width: 500px;
   }
-  to {
-    width: 24em;
+  .coach-info p {
+      max-height: none;
   }
 }
-@keyframes blinkTextCursor {
-  from {
-    border-right-color: rgba(255, 255, 255, 0.75);
+
+@media (max-width: 600px) {
+  .navbar-brand {
+      display: none;
   }
-  to {
-    border-right-color: transparent;
+
+  .coach-info, .skill-container {
+      padding: 5px 20px;
+      width: 80vw;
+      height: auto;
   }
-} */
 
-/*Coaches Gallery Animation*/
-.arrow-icon {
-  animation: sld-left 2s infinite;
-  color: white;
-}
-
-@keyframes sld-left {
-  0%,
-  100% {
-    transform: translate(0, 0);
+  h1 {
+      font-size: 4rem;
   }
-  50%,
-  65% {
-    transform: translateX(-30px);
+
+  h1 img {
+      height: 60px;
   }
-}
-/*End Coaches Gallery animation
-
-/* additional styling for gallery */
-.gallery-info {
-  padding-bottom: 50px;
-  height: 400px;
-  text-align: left;
-}
-
-#gallery h1 {
-  color: white;
-}
-
-.gallery-info-desc {
-  height: auto;
-  /* padding-right:0; */
-  /* padding-left: 0; */
-  /* padding-left: 30px; */
-  /* margin-right: 0px;
-  padding-right: 30px;
-  padding-left: 0px; */
-}
-.gallery-img-col {
-  padding-right: 0;
-  padding-bottom: 30px;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10px;
-}
-
-/* CAROUSEL */
-
-.swiper-container {
-  width: 100%;
-  height: 500px;
-}
-
-.swiper-slide {
-  width: 100%;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-.coach-info-container {
-  display: flex;
-  width: 800px;
-  margin-right: 100px;
-}
-.profile-picture {
-  background-color: red;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background-size: cover;
-  background-position: center;
-}
-.coach-info {
-  padding-left: 20px;
-  padding-top: 20px;
-  width: 600px;
-  padding-right: 20px;
-}
-
-.coach-info > h1 {
-  font-family: "Bebas Neue";
-}
-.coach-info > p {
-  padding-left: 10px;
-  width: 100%;
-  height: 100px;
-  overflow-y: auto;
-}
-.skill-info-container {
-  width: 200px;
-  height: 200px;
-}
-/* Stats Styling */
-
-.btn-stats {
-  float:right;
-  margin-top: 1.4vh;
-  margin-right:1vh;
-}
-
-.btn-stats, .gallery-header {
-  display:inline-block;
-}
-
-.gallery-desc {
-  display:block;
-}
-
-.sidenav {
-  height: 420px;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-  text-align:center;
-}
-
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #fff;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav a:hover {
-  color:red;
-}
-
-.sidenav a>span{
-  display:block;
-  color:#0275D8;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
   
+  h2 {
+      font-size: 3rem;
+  }
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+@media (max-height: 550px) {
+  #welcome {
+      height: auto;
+  }
+}
+
+@media (max-height: 450px) {
+  #airtable-fb {
+      width: 80vw;
+  }
 }
