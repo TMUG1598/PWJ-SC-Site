@@ -41,19 +41,23 @@
                 <a href="" class="nav-link" href="#coaches">Coaches</a>
             </li>
             <li class="nav-item">
-                <a href="" class="nav-link" href="#">Profiles</a>
+                <a href="" class="nav-link" href="#gallery">Profiles</a>
             </li>
         </ul>
-        <a href="" class="mx-auto navbar-brand" href="#">JAVASCRIPT SUCCESS COACHES</a>
-        <ul class="navbar-nav">
+        <a href="" class="mx-auto navbar-brand" href="#welcome"><h3>JAVASCRIPT SUCCESS COACHES</h3></a>
+        <ul class="navbar-nav text-right">
             <li class="nav-item">
-                <a href="" class="nav-link" href="#">Got Feedback?</a>
+                <a href="" class="nav-link" href="#feedback">Got Feedback?</a>
             </li>
             <li class="nav-item">
-                <a href="" class="nav-link" href="#">Apply to be a JSC</a>
+                <a href="https://airtable.com/shrFosoZnqzwllDuc" class="nav-link" target="_blank">Apply to be a JSC</a>
             </li>
         </ul>
     </nav>
+
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
 
     <!-- WELCOME -->
     <div id="welcome" style="background-color: grey; background: url('img/call.gif'); height: 100vh;">
@@ -129,6 +133,7 @@
         </div>
     </div>
 
+    <!-- LIST OF COACHES -->
     <div id="coaches" style="background-color: white;">
         <div class="container py-5 text-dark d-flex flex-column justify-content-start align-items-center text-center">
             <h1>LIST OF SUCCESS COACHES</h1>
@@ -142,7 +147,55 @@
         </div>
     </div>
 
+    <!-- PROFILE DESCRIPTION -->
+    <div id="gallery" class="text-dark" style="background-color: white;">
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                    <!-- Slides -->
+            </div>
+
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
     
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+    
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </div>
+    </div>
+
+    <!-- FEEDBACK -->
+    <div id="feedback" class="bg-danger" style="height: fit-content;">
+        <div class="container py-5 text-light d-flex flex-row flex-wrap justify-content-around align-items-center text-center">
+            <h1 class="text-center">We want to hear<br>your thoughts!</h1>
+            <iframe id="airtable-fb"
+            src="https://airtable.com/embed/shrW8szPpFLhtlKY1"
+            frameborder="0"
+            onmousewheel=""
+            width="400px"
+            height="500px"
+            style="background: transparent; border: none;"
+            ></iframe>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div id="footer">
+        <div class="container text-center text-dark">
+            <p class="my-5">
+              This site was entirely coded from scratch by the success coaches with
+              the power of bootstrap. Word of warning, you do not need to code
+              websites from scratch. It's not something we're entirely proud of!
+              Updates coming soon.
+            </p>
+        </div>
+    </div>
+
+    
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
