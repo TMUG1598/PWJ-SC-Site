@@ -11,15 +11,15 @@ getCoachCardTemplate = (coach) => {
           <div class="card" style="width: 400px; margin: 10px" data-aos="zoom-in-up">
             <div class="card-body">
               <div class="d-flex justify-content-between align-items-center">
-                  <a class="text-dark" href=#${coach.name}><h2 class="text-dark">${coach.name}</h2></a>
-                  <a class="text-primary" href=#${coach.name}>
+                  <a class="text-dark" href='#${coach.name}'><h2 class="text-dark">${coach.name}</h2></a>
+                  <a class="text-primary" href='#${coach.name}'>
                       <div style="width: 100px; height: 100px; border-radius: 50%; overflow: hidden;">
                           <img src=${coach.profpic} alt="" width="100px"></img>
                       </div>
                   </a>
               </div>
               <p class="card-subtitle text-muted">${coach.country} (GMT${coach.UTC})</p>
-              <a class="text-primary" href=#${coach.name}><p>Know More About ${coach.name}</p></a>
+              <a class="text-primary" href='#${coach.name}'><p>Know More About ${coach.name}</p></a>
               <a class="text-info" href= ${coach["slack"].profileSearchUrl}${coach["slack"].userId} target="_blank">
                   <p>Open ${coach["name"]}'s <i class="fab fa-slack"></i> Profile</p>
               </a>
