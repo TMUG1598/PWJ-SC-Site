@@ -159,7 +159,7 @@ a {
 /* this is the animation code for typewriter animation  */
 
 /* Google Fonts */
-@import url(https://fonts.googleapis.com/css?family=Anonymous + Pro);
+@import url(https://fonts.googleapis.com/css?family=Anonymous);
 
 .line-1 {
   position: relative;
@@ -240,4 +240,53 @@ a {
   align-items: center;
   justify-content: center;
   margin-top: 10px;
+}
+
+/* CAROUSEL */
+
+.swiper-container {
+  width: 100%;
+  height: 500px;
+}
+
+.swiper-slide {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.coach-info-container {
+  display: flex;
+  width: 800px;
+  margin-right: 100px;
+}
+.profile-picture {
+  background-color: red;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+}
+.coach-info {
+  padding-left: 20px;
+  padding-top: 20px;
+  width: 600px;
+  padding-right: 20px;
+}
+
+.coach-info > h1 {
+  font-family: "Bebas Neue";
+}
+.coach-info > p {
+  padding-left: 10px;
+  width: 100%;
+  height: 100px;
+  overflow-y: auto;
+}
+.skill-info-container {
+  width: 200px;
+  height: 200px;
 }

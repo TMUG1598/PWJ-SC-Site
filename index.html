@@ -13,8 +13,7 @@
       src="https://kit.fontawesome.com/f1b887a66b.js"
       crossorigin="anonymous"
     ></script>
-    <script src="script.js"></script>
-    <script src="coaches.js"></script>
+
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Raleway"
@@ -24,6 +23,8 @@
       href="https://fonts.googleapis.com/css?family=Bebas+Neue"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
   </head>
 
   <body>
@@ -75,7 +76,6 @@
         <div class="progress-bar" id="myBar"></div>
       </div>
     </div>
-    
 
     <section id="welcome-section">
       <div id="welcome" style="background: url('img/call.gif');">
@@ -90,7 +90,7 @@
             data-aos="zoom-out"
           />
           <div class="d-flex flex-inline align-items-baseline">
-            <img src="img/js.png" alt="" height="80px">
+            <img src="img/js.png" alt="" height="80px" />
             <h2
               class="display-1"
               style="font-family: 'Bebas Neue'; margin: 0 10px;"
@@ -98,7 +98,7 @@
             >
               WELCOME!
             </h2>
-            <img src="img/js.png" alt="" height="80px">
+            <img src="img/js.png" alt="" height="80px" />
           </div>
           <p data-aos="zoom-in">
             Connect with an available Javascript Success Coach below.
@@ -219,15 +219,49 @@
       <div id="gallery" class="bg-dark text-center" style="height: 100vh;">
         <h1
           class="display-2"
-          style="font-family: 'Bebas Neue';" 
+          style="font-family: 'Bebas Neue';"
           data-aos="zoom-in"
         >
           GET TO KNOW THE COACHES
         </h1>
-        <div data-aos="zoom-in-up" data-aos-delay="200" style="margin-bottom: 20px;">
+        <div
+          data-aos="zoom-in-up"
+          data-aos-delay="200"
+          style="margin-bottom: 20px;"
+        >
           <div class="tab" id="tab"></div>
           <div class="tabcontent" id="tabcontent"></div>
         </div>
+      </div>
+    </section>
+
+    <section id="carousel">
+      <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="coach-info-container">
+              <div class="profile-picture"></div>
+              <div class="coach-info">
+                <h1>Name</h1>
+                <p>description</p>
+              </div>
+            </div>
+            <div class="skill-container">
+              skill
+            </div>
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
       </div>
     </section>
 
@@ -237,24 +271,25 @@
         class="bg-danger text-center text-white"
         style="height: 100vh;"
       >
-        <div class="row d-flex flex-row flex-wrap justify-content-center align-items-center">
+        <div
+          class="row d-flex flex-row flex-wrap justify-content-center align-items-center"
+        >
           <div class="col" data-aos="zoom-in-down">
-            <h2 class="display-1"
-            style="font-family: 'Bebas Neue';"
-            >
+            <h2 class="display-1" style="font-family: 'Bebas Neue';">
               We want to hear your thoughts!
             </h2>
           </div>
           <div class="col" data-aos="zoom-in" data-aos-delay="300">
-            <iframe class="airtable-embed" 
-                    src="https://airtable.com/embed/shrW8szPpFLhtlKY1"
-                    frameborder="0" 
-                    onmousewheel="" 
-                    width="100%"
-                    height="550px"
-                    style="background: transparent; border: none;"
-                    >
-            </iframe> 
+            <iframe
+              class="airtable-embed"
+              src="https://airtable.com/embed/shrW8szPpFLhtlKY1"
+              frameborder="0"
+              onmousewheel=""
+              width="100%"
+              height="550px"
+              style="background: transparent; border: none;"
+            >
+            </iframe>
           </div>
         </div>
       </div>
@@ -262,10 +297,11 @@
 
     <section id="footer-section">
       <div class="container text-center text-dark">
-        <p class="m-5">
-          This site was entirely coded from scratch by the success coaches. Word
-          of warning, you do not need to code websites from scratch. It's not
-          something we're entirely proud of! Updates coming soon.
+        <p class="my-5">
+          This site was entirely coded from scratch by the success coaches with
+          the power of bootstrap. Word of warning, you do not need to code
+          websites from scratch. It's not something we're entirely proud of!
+          Updates coming soon.
         </p>
       </div>
     </section>
@@ -274,5 +310,11 @@
     <script>
       AOS.init();
     </script>
+
+    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
+    <script src="coaches.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

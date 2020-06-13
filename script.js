@@ -1,40 +1,90 @@
+displayCoachSlide = () => {
+  setTimeout(() => {
+    var mySwiper = new Swiper(".swiper-container", {
+      // Optional parameters
+      direction: "horizontal",
+      loop: true,
+
+      // If we need pagination
+      pagination: {
+        el: ".swiper-pagination",
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+
+      // And if we need scrollbar
+      scrollbar: {
+        el: ".swiper-scrollbar",
+      },
+    });
+  }, 0);
+  let slidesHTML = "";
+  coaches.forEach((coach) => {
+    slidesHTML += `
+        <div class="swiper-slide">
+          <div class="coach-info-container">
+            <div class="profile-picture" style="background-image: url(${coach.profpic})"></div>
+            <div class="coach-info">
+              <h1>${coach.name}</h1>
+              <p>${coach.description}</p>
+            </div>
+          </div>
+          <div class="skill-container">
+            skill
+          </div>
+        </div>
+    `;
+  });
+  document.querySelector(".swiper-wrapper").innerHTML = slidesHTML;
+};
+
 scrollBar = () => {
   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var height =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
   var scrolled = (winScroll / height) * 100;
   document.getElementById("myBar").style.width = scrolled + "%";
-}
+};
 
 showCoaches = () => {
   let cards = "";
-  coaches.forEach(coach => {
-    cards += getCoachCardTemplate(coach)
+  coaches.forEach((coach) => {
+    cards += getCoachCardTemplate(coach);
   });
-  document.getElementById('coach-card').innerHTML = cards;
-}
+  document.getElementById("coach-card").innerHTML = cards;
+};
 
 getCoachCardTemplate = (coach) => {
   let html = `
-          <div class="card" style="width: 300px; margin: 10px">
+          <div class="card" style="width: 400px; margin: 10px">
             <div class="card-body">
-              <div class="row">
-                <div class="col-8">
-                  <h2 class="card-title display-4" style="font-family: 'Bebas Neue';">${coach.name}</h2>
-                </div>
-                <div class="col-4">
-                  <div class="icon">${checkStatus(coach)}</div>
-                </div>
+              <div class="d-flex justify-content-between align-items-center">
+                  <h2 class="card-title display-4" style="font-family: 'Bebas Neue';">${
+                    coach.name
+                  }</h2>
+                  <div style="width: 100px; height: 100px; border-radius: 50%; overflow: hidden;">
+                    <img src=${coach.profpic} alt="" width="100px"></img>
+                  </div>
               </div>
-              <h6 class="card-subtitle mb-2 text-muted">${displayTimeNow(coach)}${coach["UTC"]}</h6>
+              <h6 class="card-subtitle mb-2 text-muted">${displayTimeNow(
+                coach
+              )}${coach["UTC"]}</h6>
               <p class="card-text"></p>
-              <a class="text-primary" href= ${coach["slack"].profileSearchUrl}${coach["slack"].userId} target="_blank">
+              <a class="text-primary" href= ${coach["slack"].profileSearchUrl}${
+    coach["slack"].userId
+  } target="_blank">
                   Open ${coach["name"]}'s <i class="fab fa-slack"></i> Profile
               </a>
             </div>
           </div>
         `;
   return html;
-}
+};
 
 checkStatus = (coach) => {
   let date = new Date();
@@ -47,7 +97,7 @@ checkStatus = (coach) => {
   } else {
     return `<div class="text-danger"><i class="fas fa-bed"></i></div>`;
   }
-}
+};
 
 displayTimeNow = (coach) => {
   let date = new Date();
@@ -56,14 +106,13 @@ displayTimeNow = (coach) => {
   var n = date.toUTCString();
 
   return n;
-}
-
+};
 
 openProfile = (btn, index) => {
-  let tabName = document.getElementsByClassName('tabname');
+  let tabName = document.getElementsByClassName("tabname");
   for (let i = 0; i < tabName.length; i++) {
-    if (tabName[i].classList.contains('active') == true) {
-      tabName[i].classList.remove('active');
+    if (tabName[i].classList.contains("active") == true) {
+      tabName[i].classList.remove("active");
     }
   }
   btn.classList.toggle("active");
@@ -82,7 +131,7 @@ openProfile = (btn, index) => {
             </div>
         </div>
     `;
-}
+};
 
 createCoachesGallery = () => {
   let coachGallerylist = [];
@@ -97,35 +146,23 @@ createCoachesGallery = () => {
             <h1 class="text-primary display-1">${arrow}</h1>
         </div>
         `;
-}
-
+};
 
 let intervalId;
 window.onload = function () {
+  displayCoachSlide();
   createCoachesGallery();
   showCoaches();
   AOS.refresh();
   intervalId = setInterval(() => showCoaches(), 1000);
 };
 
-window.onscroll = function() {scrollBar()};
+window.onscroll = function () {
+  scrollBar();
+};
 
 window.onbeforeunload = () => {
   clearInterval(intervalId);
-}
-
-
-
-
-
-
-
-
+};
 
 //Check if time if available
-
-
-
-
-
-
