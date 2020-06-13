@@ -97,9 +97,14 @@ p, .nav-link {
 }
 
 @media (max-width: 1500px) {
-  .coach-info, .skill-container {
+  .coach-info {
       padding: 5px 20px;
       width: 500px;
+  }
+  .skill-container {
+    padding: 5px 20px;
+    width: 80vw;
+    text-align: center;
   }
   .coach-info p {
       max-height: none;

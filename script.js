@@ -56,12 +56,7 @@ displayCoachSlide = () => {
       },
     });
   }, 0);
-  let slidesHTML = `
-    <div class="p-5 swiper-slide d-flex flex-column align-items-center justify-content-center text-center" data-aos="zoom-out">
-        <h1>Learn more about<br> the coaches<br> here!</h1>
-        <h2 class="text-info">Use the arrows on the sides</h2>
-    </div>
-  `;
+  let slidesHTML = "";
   coaches.forEach((coach) => {
     slidesHTML += `
         <div class="p-5 swiper-slide d-flex align-items-start justify-content-center" id=${coach.name} data-aos="zoom-out">
