@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team JSC</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script
+      src="https://kit.fontawesome.com/f1b887a66b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Bebas+Neue"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
+    <link rel="stylesheet" href="style-v1.css">
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav class="navbar w-100 navbar-dark bg-dark navbar-expand-lg">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a href="" class="nav-link" href="#welcome">Welcome</a>
+            </li>
+            <li class="nav-item">
+                <a href="" class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+                <a href="" class="nav-link" href="#coaches">Coaches</a>
+            </li>
+            <li class="nav-item">
+                <a href="" class="nav-link" href="#">Profiles</a>
+            </li>
+        </ul>
+        <a href="" class="mx-auto navbar-brand" href="#">JAVASCRIPT SUCCESS COACHES</a>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a href="" class="nav-link" href="#">Got Feedback?</a>
+            </li>
+            <li class="nav-item">
+                <a href="" class="nav-link" href="#">Apply to be a JSC</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- WELCOME -->
+    <div id="welcome" style="background-color: grey; background: url('img/call.gif'); height: 100vh;">
+        <div style="width: 100vw; height: 100vh; background-color: rgb(58, 58, 58, 0.7)">
+            <div class="container text-light d-flex flex-column justify-content-center align-items-center" style="height: 100%;">
+                <img src="img/JSC-logo.png" alt="Logo of JavaScript Success Coaches" height="300px" data-aos="zoom-out"/>
+                <h1 class="">WELCOME!</h1>
+                <p>Connect with a Javascript Success Coach today.</p>
+                <a href="#" class="btn btn-lg btn-warning text-dark">
+                    Find a JSC now!
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <div id="about" style="background-color: #378ebf;">
+        <div class="container py-5 text-light d-flex flex-column justify-content-around align-items-center text-center">
+            <h1>WHO ARE WE?</h1>
+            <p>
+                We are one of the best resources to help you make the most out of
+                this course. We try to personalise your experience regardless of
+                your skill level and throw in a bit of fun while at it.
+            </p>
+
+            <h2>WHAT WILL YOU GET FROM US?</h2>
+
+            <div class="d-flex flex-row flex-wrap justify-content-center align-items-center">
+                <!-- card 1 -->
+                <div class="m-2 card" style="width: 250px; height: 310px;">
+                    <div class="card-body text-dark">
+                        <i class="fas fa-laptop-code icon" style="font-size: 50px;"></i>
+                        <h3 class="name">Video Feedback On Your Homework</h3>
+                        <p class="description">
+                          You will receive video feedback on every homework you submit including submitted PWJ module projects
+                        </p>
+                    </div>
+                </div>
+                <!-- card 2 -->
+                <div class="m-2 card" style="width: 250px; height: 310px;">
+                    <div class="card-body text-dark">
+                        <i class="fas fa-headphones-alt icon" style="font-size: 50px;"></i>
+                        <h3 class="name">One-on-One Coaching Calls</h3>
+                        <p class="description">
+                            Yes, you can schedule a 1-on-1 call with any one of us if you need that additional support.
+                        </p>
+                    </div>
+                </div>
+                <!-- card 3 -->
+                <div class="m-2 card" style="width: 250px; height: 310px;">
+                    <div class="card-body text-dark">
+                        <i class="far fa-life-ring icon" style="font-size: 50px;"></i>
+                        <h3 class="name">Ad-hoc Support</h3>
+                        <p class="description">
+                            Sometimes Slack or Facebook posts may get lost and not
+                            answered. Feel free to tag any one of us. We are happy to jump
+                            in to help you.
+                        </p>
+                    </div>
+                </div>
+                <div class="m-2 card" style="width: 250px; height: 310px;">
+                    <div class="card-body text-dark">
+                        <i class="fas fa-laptop-code icon" style="font-size: 50px;"></i>
+                        <h3 class="name">Weekly Live Coaching Calls</h3>
+                        <p class="description">
+                            We host weekly Live Coaching calls on topics that
+                            matter to you so always look out for those invites.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div id="coaches" style="background-color: white;">
+        <div class="container py-5 text-dark d-flex flex-column justify-content-start align-items-center text-center">
+            <h1>LIST OF SUCCESS COACHES</h1>
+            <p>
+                All the coaches are listed below. 
+                To contact them, you may choose to reach them on Slack. 
+                You can check out their profile descriptions by pressing on their card.
+            </p>
+        </div>
+        <div class="d-flex flex-row flex-wrap justify-content-center text-left" id="coach-card">
+        </div>
+    </div>
+
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
+    <script src="coaches.js"></script>
+    <script src="script-v1.js"></script>
+</body>
+</html>

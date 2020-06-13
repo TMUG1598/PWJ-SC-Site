@@ -1,0 +1,16 @@
+h1, h2, h3, p {
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .navbar-brand {
+        display: none;
+    }
+}
+
+@media (max-height: 550px) {
+    #welcome {
+        height: 550px;
+    }
+}
