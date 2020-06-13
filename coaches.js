@@ -1,5 +1,14 @@
 let coaches = [
     {
+      "name": "Daniel",
+      "UTC": "-7",
+      "diff": { "hours": -7, "minutes": 0 },
+      "available": [11, 18],
+      "profpic": "img/Daniel.jpg",
+      "description": "I am Daniel Jimenez, 18 year old JavaScript Developer, and I will be majoring in Computer Science to obtain my Associates in Computer Science at Antelope Valley College and plan on transferring to University of California Irvine to obtain my bachelor's in Computer Science to further advance my development career. I'm so glad to be apart of the Success Coach Team and can't wait to help you guys become amazing JavaScript Developers! And if anyone has any questions, I'm more than happy to help!",
+      "slack": { "userId": "U011XATCABU", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" }
+    },
+    {
       "name": "Kiska",
       "UTC": "-6",
       "diff": { "hours": -6, "minutes": 0 },
@@ -27,6 +36,15 @@ let coaches = [
       "slack": { "userId": "U0132DUPHCY", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" }
     },
     {
+      "name": "Elvis",
+      "UTC": "-4",
+      "diff": { "hours": -4, "minutes": 0 },
+      "available": [17, 22],
+      "profpic": "img/Elvis.png",
+      "description": "My name is Elvis Moyolema yeah like Elvis Presley. I recently graduated from LaGuardia Community College with an Associates Degree in Computer Science and ofc I still want to thrive for more, so I’m planning to attend Queens College this Fall 2020. I’m one of the new Success Coaches in this wonderful group, and as many of you I’m still learning and challenging myself to do great things with JS. I also speak Spanish, so you could ask your questions in Spanish to me and I will get back to you as soon as possible.",
+      "slack": { "userId": "U012MFM6C20", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" }
+    },
+    {
       "name": "Rishi",
       "UTC": "-4",
       "diff": { "hours": -4, "minutes": 0 },
@@ -35,6 +53,26 @@ let coaches = [
       "description":
         "I am a 21 year old developer who just graduated in Mobile Application Design and Development and I am based in Canada for now. I have expertise in JavaScript, React and I am very enthusiast about Augmented Reality as I am working on one project based on AR and I love how machine learning and deep learning is changing th world. Enrolling in PWJ is one of the best thing I did in my life and I swear I mean it. Becoming Success Coach is kinda first achievement in my field in my life and I am vert proud of myself for that. This is the best community and I look forward to teach and learn as much as I can.",
       "slack": { "userId": "U0123Q83D6X", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" }
+    },
+    {
+      "name": "Aziz",
+      "UTC": "+1",
+      "diff": { "hours": 1, "minutes": 0 },
+      "available": [20, 23],
+      "profpic": "img/Aziz.png",
+      "description":
+        "My name is Aziz Manai a computer sciences student, coding is my passion, I know javascript and a few other programming languages like c/c++ and I can help you a lot with HTML, CSS & bootstrap too, also entrepreneurship excites me so I hope that I’ll have my own IT startup after graduating, One last thing about myself is that I joined success coaches team because my biggest satisfaction is when I provide help to someone... and you can we can speak even in french & Arabic too",
+      "slack": { "userId": "U012REL2XCL", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" }
+    },
+    {
+      "name": "Hardeep",
+      "UTC": "+1",
+      "diff": { "hours": 1, "minutes": 0 },
+      "available": [17, 23],
+      "profpic": "img/Hardeep.jpg",
+      "description":
+        "My name is Hardeep Singh. I'm studying computing at my college but manage my phones business usually. The reason I become success coach is to help people and provide value to them as I believe in working together makes me understand the code better.",
+      "slack": { "userId": "U01391Z5LKS", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" }
     },
     {
       "name": "Youssef",
@@ -74,6 +112,15 @@ let coaches = [
       "slack": { "userId": "U011ZTC6SEM", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" }
     },
     {
+      "name": "Amaanath",
+      "UTC": "+5:30",
+      "diff": { "hours": 5, "minutes": 30 },
+      "available": [7,11],
+      "profpic": "img/Amaanath.jpeg",
+      "description": "My name is Amaanath Mumtaz, I'm a 17 y/o JavaScript + Python Programmer, currently I'm doing my AL Mathematics + a Bachelor's in IT. My Aim is to become an AI Engineer + Entrepreneur. I love helping out people to achieve greatness to the best of my abilities & talents.",
+      "slack": { "userId": "U012R4DG6JW", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" }
+    },
+    {
       "name": "Gaurav",
       "UTC": "+5:30",
       "diff": { "hours": 5, "minutes": 30 },
@@ -81,6 +128,15 @@ let coaches = [
       "profpic": "img/gaurav.png",
       "description": "Located in India! A web developer by profession having close to 7 years of experience. <br> I enjoy sharing my knowledge and experience with those who seek! <br>Profit With Javascript has given me an amazing platform to connect with people from all walks of life. Looking forward to start my journey as a tutor and a freelancer.",
       "slack": { "userId": "U011D000RNZ", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" }
+    },
+    {
+      "name": "Soumyadeep",
+      "UTC": "+5:30",
+      "diff": { "hours": 5, "minutes": 30 },
+      "available": [9,15],
+      "profpic": "img/Soumyadeep.jpg",
+      "description": "I am Soumyadeep Paul, 21 year old college student who is majoring in Computer Science. I have had an experience of solving doubts regarding HTML, CSS, JavaScript, NodeJS, MongoDB. I am a newbie to React and so won't be able to help in that until I get some practise. I'm glad to be apart of the Success Coach Team and can't wait to help you guys become amazing JavaScript Developers! ",
+      "slack": { "userId": "U011PHJJ03V", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" }
     },
     {
       "name": "Van",

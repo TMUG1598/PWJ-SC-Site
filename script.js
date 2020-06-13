@@ -4,6 +4,7 @@ displayCoachSlide = () => {
       // Optional parameters
       direction: "horizontal",
       loop: true,
+      autoplay: 4000,
 
       // If we need pagination
       pagination: {
