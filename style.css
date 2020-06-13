@@ -148,7 +148,7 @@ a {
 
 .tabcontent {
   float: left;
-  padding: 0px 12px;
+  padding: 0px 0px 0px 12px;
   border: 1px solid #ccc;
   width: 80%;
   border-left: none;
@@ -228,6 +228,7 @@ a {
 
 .gallery-info-desc {
   height: auto;
+  /* padding-right:0; */
   /* padding-left: 0; */
   /* padding-left: 30px; */
   /* margin-right: 0px;
@@ -240,4 +241,66 @@ a {
   align-items: center;
   justify-content: center;
   margin-top: 10px;
+}
+
+/* Stats Styling */
+
+.btn-stats {
+  float:right;
+  margin-top: 1.4vh;
+  margin-right:1vh;
+}
+
+.btn-stats, .gallery-header {
+  display:inline-block;
+}
+
+.gallery-desc {
+  display:block;
+}
+
+.sidenav {
+  height: 420px;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align:center;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #fff;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color:red;
+}
+
+.sidenav a>span{
+  display:block;
+  color:#0275D8;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }

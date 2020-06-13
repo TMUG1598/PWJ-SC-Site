@@ -184,3 +184,95 @@ let coaches = [
       "slack": { "userId": "U0119RT1A5P", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" }
     }
   ]
+
+  let stats = [{
+    "skills":"HTML, CSS, JavaScript, DOM, Git, GitHub",
+    "rating": "⭐⭐⭐⭐",
+    "clients": 5
+  },
+  {
+    "skills":"HTML, CSS, JavaScript, DOM, Git, GitHub",
+    "rating": "⭐⭐⭐⭐⭐",
+    "clients": 5
+  },
+  {
+    "skills":"HTML, CSS, JavaScript, DOM, Git, GitHub",
+    "rating": "⭐⭐⭐⭐",
+    "clients": 5
+  },
+  {
+    "skills":"HTML, CSS, JavaScript, DOM, Git, GitHub",
+    "rating": "⭐⭐⭐⭐",
+    "clients": 5
+  },
+  {
+    "skills":"HTML, CSS, JavaScript, DOM, Git, GitHub",
+    "rating": "⭐⭐⭐⭐",
+    "clients": 5
+  },
+  {
+    "skills":"HTML, CSS, JavaScript, DOM, Git, GitHub",
+    "rating": "⭐⭐⭐⭐",
+    "clients": 5
+  },
+  {
+    "skills":"HTML, CSS, JavaScript, DOM, Git, GitHub",
+    "rating": "⭐⭐⭐⭐",
+    "clients": 5
+  },
+  {
+    "skills":"HTML, CSS, JavaScript, DOM, Git, GitHub",
+    "rating": "⭐⭐⭐⭐",
+    "clients": 5
+  },
+  {
+    "skills":"HTML, CSS, JavaScript, DOM, Git, GitHub",
+    "rating": "⭐⭐⭐⭐",
+    "clients": 5
+  },{
+    "skills":"HTML, CSS, JavaScript, DOM, Git, GitHub",
+    "rating": "⭐⭐⭐⭐",
+    "clients": 5
+  },
+  {
+    "skills":"HTML, CSS, JavaScript, DOM, Git, GitHub",
+    "rating": "⭐⭐⭐⭐",
+    "clients": 5
+  },
+  {
+    "skills":"HTML, CSS, JavaScript, DOM, Git, GitHub",
+    "rating": "⭐⭐⭐⭐",
+    "clients": 5
+  },
+  {
+    "skills":"HTML, CSS, JavaScript, DOM, Git, GitHub",
+    "rating": "⭐⭐⭐⭐",
+    "clients": 5
+  },
+  {
+    "skills":"HTML, CSS, JavaScript, DOM, Git, GitHub",
+    "rating": "⭐⭐⭐⭐",
+    "clients": 5
+  },
+  {
+    "skills":"HTML, CSS, JavaScript, DOM, Git, GitHub",
+    "rating": "⭐⭐⭐⭐",
+    "clients": 5
+  },
+  {
+    "skills":"HTML, CSS, JavaScript, DOM, Git, GitHub",
+    "rating": "⭐⭐⭐⭐",
+    "clients": 5
+  },
+  {
+    "skills":"HTML, CSS, JavaScript, DOM, Git, GitHub",
+    "rating": "⭐⭐⭐⭐",
+    "clients": 5
+  },
+  {
+    "skills":"HTML, CSS, JavaScript, DOM, Git, GitHub",
+    "rating": "⭐⭐⭐⭐",
+    "clients": 5
+  },
+  
+]

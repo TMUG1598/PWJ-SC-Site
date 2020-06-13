@@ -74,12 +74,32 @@ openProfile = (btn, index) => {
                 </div>
 
                 <div class="col gallery-info-desc"> 
-                    <h1>${coaches[index]["name"]}</h1>
-                    <span>${coaches[index]["description"]}</span>
+
+              
+                <div id="mySidenav" class="sidenav">
+                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                  <a href="#"><span>Our Stats</span></a>
+                  <a href="#"><span>Skills:</span> ${stats[index]['skills']}</a>
+                  <a href="#"><span>Rating:</span> ${stats[index]['rating']}</a>
+                  <a href="#"><span>Clients:</span> ${stats[index]['clients']}</a>
+                </div>
+                    <h1 class = "gallery-header">${coaches[index]["name"]}</h1>
+                    <button type = "button" class = "btn  btn-info btn-stats" onclick="openNav()">Click To see stats</button>
+                    <span class = "gallery-desc">${coaches[index]["description"]}</span>
                 </div>
             </div>
         </div>
     `;
+}
+
+/* Set the width of the side navigation to 250px */
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
 }
 
 createCoachesGallery = () => {
