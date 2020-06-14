@@ -129,21 +129,21 @@ let coaches = [
       "clients": 5,
       "setmore":"https://hardeep.setmore.com/"
     },
-    {
-      "name": "Youssef",
-      "country": "Tunisia",
-      "UTC": "+1",
-      "diff": { "hours": 1, "minutes": 0 },
-      "available": [9, 17],
-      "profpic": "img/Yousseff.jpg",
-      "description":
-        "I am a JavaScript Developer and a Microsoft Student Partner. I am passionate about CODING and new technologies. AND OF COURSE I LOVE PIZZA",
-      "slack": { "userId": "U012C8ZKXNF", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" },
-      "skills":"HTML, CSS, JavaScript, DOM, Git, GitHub",
-      "rating": "⭐⭐⭐⭐",
-      "clients": 5,
-      "setmore":"",
-    },
+    // {
+    //   "name": "Youssef",
+    //   "country": "Tunisia",
+    //   "UTC": "+1",
+    //   "diff": { "hours": 1, "minutes": 0 },
+    //   "available": [9, 17],
+    //   "profpic": "img/Yousseff.JPG",
+    //   "description":
+    //     "I am a JavaScript Developer and a Microsoft Student Partner. I am passionate about CODING and new technologies. AND OF COURSE I LOVE PIZZA",
+    //   "slack": { "userId": "U012C8ZKXNF", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" },
+    //   "skills":"HTML, CSS, JavaScript, DOM, Git, GitHub",
+    //   "rating": "⭐⭐⭐⭐",
+    //   "clients": 5,
+    //   "setmore":"",
+    // },
     {
       "name": "Abdou",
       "country": "Germany",
