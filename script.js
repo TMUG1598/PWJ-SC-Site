@@ -12,7 +12,7 @@ getCoachCardTemplate = (coach) => {
             <div class="card-body">
               <div class="d-flex justify-content-between align-items-center">
                   <a class="text-dark" href='#${coach.name}'><h2 class="text-dark">${coach.name}</h2></a>
-                  <a class="text-primary" href='#${coach.name}'>
+                  <a href='#${coach.name}'>
                       <div style="width: 100px; height: 100px; border-radius: 50%; overflow: hidden;">
                           <img src=${coach.profpic} alt="" width="100px"></img>
                       </div>

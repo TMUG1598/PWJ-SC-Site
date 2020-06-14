@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden;
+}
+
 h1, h2, h3, p {
   padding: 0;
   margin: 0;
@@ -105,9 +109,6 @@ p, .nav-link {
     padding: 5px 20px;
     width: 80vw;
     text-align: center;
-  }
-  .coach-info p {
-      max-height: none;
   }
 }
 
