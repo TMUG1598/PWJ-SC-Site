@@ -1,34 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team JSC</title>
-    <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <script
-      src="https://kit.fontawesome.com/f1b887a66b.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      href="https://fonts.googleapis.com/css?family=Raleway"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Bebas+Neue"
-      rel="stylesheet"
-    />
+    <script src="https://kit.fontawesome.com/f1b887a66b.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
     <link rel="stylesheet" href="style.css">
     <script src="coaches.js"></script>
     <script src="script.js"></script>
 </head>
+
 <body>
     <!-- NAVIGATION -->
     <nav class="navbar w-100 navbar-dark bg-dark navbar-expand-lg">
@@ -46,7 +35,9 @@
                 <a class="nav-link" href="#gallery">Profiles</a>
             </li>
         </ul>
-        <a href="" class="mx-auto navbar-brand" href="#welcome"><h3>JAVASCRIPT SUCCESS COACHES</h3></a>
+        <a href="" class="mx-auto navbar-brand" href="#welcome">
+            <h3>JAVASCRIPT SUCCESS COACHES</h3>
+        </a>
         <ul class="navbar-nav text-right">
             <li class="nav-item">
                 <a class="nav-link" href="#feedback">Got Feedback?</a>
@@ -64,12 +55,14 @@
     <!-- WELCOME -->
     <div id="welcome" style="background-color: grey; background: url('img/call.gif'); height: 90vh;">
         <div style="width: 100vw; height: 100%; background-color: rgb(58, 58, 58, 0.7)">
-            <div class="container text-light d-flex flex-column justify-content-center align-items-center text-center" style="height: 100%;">
-                <img src="img/JSC-logo.png" alt="Logo of JavaScript Success Coaches" height="300px" data-aos="zoom-out"/>
+            <div class="container text-light d-flex flex-column justify-content-center align-items-center text-center"
+                style="height: 100%;">
+                <img src="img/JSC-logo.png" alt="Logo of JavaScript Success Coaches" height="300px"
+                    data-aos="zoom-out" />
                 <h1 data-aos="zoom-in">
-                    <img src="img/js.png" alt="JS Logo" height="80px"/>
+                    <img src="img/js.png" alt="JS Logo" height="80px" />
                     WELCOME!
-                    <img src="img/js.png" alt="JS Logo" height="80px"/>
+                    <img src="img/js.png" alt="JS Logo" height="80px" />
                 </h1>
                 <p data-aos="zoom-in">Connect with a Javascript Success Coach today.</p>
                 <a href="#coaches" class="btn btn-lg text-dark" data-aos="zoom-in" style="background-color: #F9DC23;">
@@ -98,7 +91,8 @@
                         <i class="fas fa-laptop-code icon" style="font-size: 50px;"></i>
                         <h3 class="name">Video Feedback On Your Homework</h3>
                         <p class="description">
-                          You will receive video feedback on every homework you submit including submitted PWJ module projects
+                            You will receive video feedback on every homework you submit including submitted PWJ module
+                            projects
                         </p>
                     </div>
                 </div>
@@ -124,7 +118,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="m-2 card" style="width: 250px; height: 310px;" data-aos="zoom-in-down" data-aos-delay="1050">
+                <div class="m-2 card" style="width: 250px; height: 310px;" data-aos="zoom-in-down"
+                    data-aos-delay="1050">
                     <div class="card-body text-dark">
                         <i class="fas fa-laptop-code icon" style="font-size: 50px;"></i>
                         <h3 class="name">Weekly Live Coaching Calls</h3>
@@ -135,7 +130,7 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </div>
 
@@ -144,7 +139,7 @@
         <div class="container py-5 text-dark d-flex flex-column justify-content-start align-items-center text-center">
             <h1 style="color:#378ebf;" data-aos="zoom-in">LIST OF SUCCESS COACHES</h1>
             <p data-aos="zoom-in">
-                All the coaches are listed below. 
+                All the coaches are listed below.
                 To contact them, you may choose to reach them on Slack. <br>
                 You can check out their profile descriptions by pressing on their name or picture.
             </p>
@@ -158,16 +153,16 @@
         <div class="swiper-container">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper" id="profile">
-                    <!-- Slides -->
+                <!-- Slides -->
             </div>
 
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
-    
+
             <!-- If we need navigation buttons -->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
-    
+
             <!-- If we need scrollbar -->
             <!-- <div class="swiper-scrollbar"></div> -->
         </div>
@@ -175,42 +170,44 @@
 
     <!-- FEEDBACK -->
     <div id="feedback" class="bg-danger" style="height: fit-content;">
-        <div class="container py-5 text-light d-flex flex-row flex-wrap justify-content-around align-items-center text-center">
+        <div
+            class="container py-5 text-light d-flex flex-row flex-wrap justify-content-around align-items-center text-center">
             <h1 class="text-center" data-aos="zoom-in">We want to hear<br>your thoughts!</h1>
-            <iframe id="airtable-fb"
-            src="https://airtable.com/embed/shrW8szPpFLhtlKY1"
-            frameborder="0"
-            onmousewheel=""
-            width="400px"
-            height="500px"
-            style="background: transparent; border: none;"
-            data-aos="zoom-out"
-            ></iframe>
+            <iframe id="airtable-fb" src="https://airtable.com/embed/shrW8szPpFLhtlKY1" frameborder="0" onmousewheel=""
+                width="400px" height="500px" style="background: transparent; border: none;"
+                data-aos="zoom-out"></iframe>
         </div>
+    </div>
+
+    <div class="calendar">
+        <iframe
+            src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FVancouver&amp;src=YWVobGxldmtrcWMwZWhuZXM5YW91b2hvNjVnc3BlbGZAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%238E24AA&amp;title=Team%20JSC&amp;showNav=0&amp;showTitle=0&amp;showCalendars=0&amp;showTabs=1&amp;showPrint=0&amp;showTz=1"
+            style="border-width:0" width="1200" height="600" frameborder="0" scrolling="no"></iframe>
     </div>
 
     <!-- FOOTER -->
     <div id="footer">
         <div class="container text-center text-dark">
             <p class="my-5">
-              This site was entirely coded from scratch by the success coaches with
-              the power of bootstrap. Word of warning, you do not need to code
-              websites from scratch. It's not something we're entirely proud of!
-              Updates coming soon. ESPECIALLY WITH BUG FIXES!
+                This site was entirely coded from scratch by the success coaches with
+                the power of bootstrap. Word of warning, you do not need to code
+                websites from scratch. It's not something we're entirely proud of!
+                Updates coming soon. ESPECIALLY WITH BUG FIXES!
             </p>
         </div>
     </div>
 
-    
+
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      AOS.init();
+        AOS.init();
     </script>
 
     <script src="https://unpkg.com/swiper/js/swiper.js"></script>
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 
-    
+
 </body>
+
 </html>
