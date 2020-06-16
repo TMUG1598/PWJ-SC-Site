@@ -69,9 +69,7 @@ displayCoachSlide = () => {
             </div>
             <div class="skill-container">
                 <h2>Statistics</h2>
-                <p><span>Skills:</span> ${coach.skills}</p>
-                <p><span>Rating:</span> ${coach.rating}</p>
-                <p><span>Clients:</span> ${coach.clients}</p>
+                ${showStatistics(coach)}
                 ${bookingCall(coach)}
             </div>
         </div>
@@ -82,7 +80,7 @@ displayCoachSlide = () => {
 
 bookingCall = (coach) => {
   if (coach.setmore === "") {
-      return `<button class="btn btn-lg btn-dark">Book a Coaching Call Now</button>`;
+      return `<button class="btn btn-lg btn-dark" disabled>Book a Coaching Call Now</button>`;
   } else {
       return `
       <a href=${coach.setmore} target="_blank">
@@ -90,6 +88,31 @@ bookingCall = (coach) => {
       </a>
       `;
   }
+}
+
+showStatistics = (coach) => {
+  var html = `
+    <p><span>Skills:</span> ${showSkills(coach)}</p>
+  `;
+
+  if (coach.rating != "" && coach.clients != 0) {
+    html += `
+      <p><span>Rating:</span> ${coach.rating}</p>
+      <p><span>Clients:</span> ${coach.clients}</p>
+    `;
+  }
+
+  return html;
+}
+
+showSkills = (coach) => {
+  var skillsHTML = '';
+  coach['skills'].forEach((skills) => {
+    skillsHTML += `
+      <button type="button" class="btn btn-outline-danger">${skillSet[skills]}</button>
+    `;
+  });
+  return skillsHTML;
 }
 
 scrollBar = () => {

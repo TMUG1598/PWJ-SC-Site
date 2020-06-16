@@ -37,6 +37,15 @@ p, .nav-link {
   font-size: 2rem;
 }
 
+.btn-outline-danger {
+  font-family: Raleway, sans-serif;
+  font-size: 1rem;
+}
+
+span {
+  font-weight: bolder;
+}
+
 .swiper-container {
   width: 100vw;
   min-height: 450px;
