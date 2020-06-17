@@ -109,6 +109,10 @@ span {
   width: 0%;
 }
 
+.card p {
+  margin: 0;
+}
+
 @media (max-width: 1500px) {
   .coach-info {
       padding: 5px 20px;

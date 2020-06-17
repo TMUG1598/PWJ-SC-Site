@@ -94,10 +94,10 @@ let coaches = [
       "profpic": "img/Usman.jpg",
       "description": "I am QA Automation Tester &  Becoming Full Stack Developer very soon. I am in EST time zone. I am good in HTML, CSS, JSON, and JS and my available time 10 am est to 18 est (14 est to 14:30 est is exception)",
       "slack": { "userId": "U0132DUPHCY", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" },
-      "skills": [],
+      "skills": [1, 3, 4, 5, 6, 7, 9, 15, 17, 32],
       "rating": "",
       "clients": 0,
-      "setmore":"",
+      "setmore":"https://celeverprogrammer.setmore.com/resourcebookingpage/ra1c66bf3f3fff4c177f8e08e1850c82922bf8e7d",
     },
     {
       "name": "Aziz",
@@ -294,10 +294,10 @@ let coaches = [
       "profpic": "img/Ushan.jpg",
       "description": "I am Tech Lover with passion for Coding and Teaching. Nowadays my free time is spent learning Javascript, HTML, CSS and working on projects here at PWJ Course. I have over decade of experience in Tech Support and Product Training and hoping to combine that with my Javascipt and coding knowledge to help any beginner get to the next level in their coding journey.",
       "slack": { "userId": "U0119RT1A5P", "profileSearchUrl": "https://app.slack.com/client/T011D0D7T54/browse-people/user_profile/" },
-      "skills": [],
+      "skills": [0, 3, 4, 6, 7],
       "rating": "",
       "clients": 0,
-      "setmore":"",
+      "setmore":"https://successcoach9050.setmore.com/",
     }
 ]
 
