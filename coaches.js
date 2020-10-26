@@ -464,12 +464,12 @@ let coaches = [
     schedule: ""
 },
 {
-    name: "Yoog",
+    name: "Yug",
     country: "",
     UTC: "",
     diff: {hours: 0,minutes: 0},
     available: [18,22],
-    profpic: "img/Yoog.jfif",
+    profpic: "img/Yug.jfif",
     description: "",
     slack: {
         userId: "U012WAR2V27",
