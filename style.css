@@ -41,6 +41,10 @@ p, .nav-link {
   font-size: 2rem;
 }
 
+btn.disabled, .btn:disabled {
+  cursor: default;
+}
+
 .text-primary {
   color: #4197C8 !important;
 }
@@ -63,7 +67,7 @@ p, .nav-link {
 }
 
 .btn-info:hover {
-  filter: brightness(85%);
+  filter: brightness(120%);
 }
 
 .btn-info {

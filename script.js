@@ -68,7 +68,7 @@ displayCoachSlide = () => {
               </div>
             </div>
             <div class="skill-container">
-                <h2>Statistics</h2>
+                <h3>Coaching Topics</h3>
                 ${showStatistics(coach)}
                 ${bookingCall(coach)}
             </div>
@@ -92,7 +92,7 @@ bookingCall = (coach) => {
 
 showStatistics = (coach) => {
   var html = `
-    <p><span>Skills:</span> ${showSkills(coach)}</p>
+    <p> ${showSkills(coach)}</p>
   `;
 
   if (coach.rating != "" && coach.clients != 0) {
