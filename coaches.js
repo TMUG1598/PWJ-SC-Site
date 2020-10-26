@@ -188,7 +188,7 @@ let coaches = [
     available: [9, 17],
     profpic: "img/Jenn.jpg",
     description:
-      "I am a frontend developer with expertise in CSS styling, data visualizations (using d3.js and chart.js), and UI/UX design. I am a bit quirky with a touch of fanciful imagination and a lover of shiny tech gadgets. I belive sharing memes is a true love language. I aspire to make the world a better place one smile at a time. My pronouns are She/Her.",
+      "I am a frontend developer with expertise in CSS styling, data visualizations (using d3.js and chart.js), and UI/UX design. I am a bit quirky with a touch of fanciful imagination and a lover of shiny tech gadgets. I belive sharing memes is a true love language. I aspire to make the world a better place one smile at a time. My pronouns are She/They.",
     slack: {
       userId: "U012QP89WTB",
       profileSearchUrl:
@@ -331,7 +331,7 @@ let coaches = [
     UTC: "",
     diff: {hours: 0,minutes: 0},
     available: [18,22],
-    profpic: "img/Punitha.jfif",
+    profpic: "img/Punitha.png",
     description: "",
     slack: {
         userId: "U011KHTG0G6",
