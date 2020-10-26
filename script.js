@@ -79,11 +79,11 @@ displayCoachSlide = () => {
 };
 
 bookingCall = (coach) => {
-  if (coach.setmore === "") {
+  if (coach.schedule === "") {
       return `<button class="btn btn-lg btn-dark" disabled>Book a Coaching Call Now</button>`;
   } else {
       return `
-      <a href=${coach.setmore} target="_blank">
+      <a href=${coach.schedule} target="_blank">
           <button class="btn btn-lg btn-info">Book a Coaching Call Now</button>
       </a>
       `;
