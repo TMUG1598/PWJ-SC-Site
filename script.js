@@ -68,7 +68,7 @@ displayCoachSlide = () => {
               </div>
             </div>
             <div class="skill-container">
-                <h2>Statistics</h2>
+                <h3>Coaching Topics</h3>
                 ${showStatistics(coach)}
                 ${bookingCall(coach)}
             </div>
@@ -79,11 +79,11 @@ displayCoachSlide = () => {
 };
 
 bookingCall = (coach) => {
-  if (coach.setmore === "") {
+  if (coach.schedule === "") {
       return `<button class="btn btn-lg btn-dark" disabled>Book a Coaching Call Now</button>`;
   } else {
       return `
-      <a href=${coach.setmore} target="_blank">
+      <a href=${coach.schedule} target="_blank">
           <button class="btn btn-lg btn-info">Book a Coaching Call Now</button>
       </a>
       `;
@@ -92,7 +92,7 @@ bookingCall = (coach) => {
 
 showStatistics = (coach) => {
   var html = `
-    <p><span>Skills:</span> ${showSkills(coach)}</p>
+    <p> ${showSkills(coach)}</p>
   `;
 
   if (coach.rating != "" && coach.clients != 0) {
@@ -109,7 +109,7 @@ showSkills = (coach) => {
   var skillsHTML = '';
   coach['skills'].forEach((skills) => {
     skillsHTML += `
-      <button type="button" class="btn btn-outline-danger">${skillSet[skills]}</button>
+      <button type="button" class="btn btn-outline-primary">${skillSet[skills]}</button>
     `;
   });
   return skillsHTML;

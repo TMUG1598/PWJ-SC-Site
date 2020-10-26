@@ -26,6 +26,10 @@ h3 {
   font-size: 2rem;
 }
 
+.bg-dark {
+  background-color: #1F1F1E !important;
+}
+
 p, .nav-link {
   font-family: Raleway, sans-serif;
   font-size: large;
@@ -37,9 +41,53 @@ p, .nav-link {
   font-size: 2rem;
 }
 
-.btn-outline-danger {
-  font-family: Raleway, sans-serif;
-  font-size: 1rem;
+btn.disabled, .btn:disabled {
+  cursor: default;
+}
+
+.text-primary {
+  color: #4197C8 !important;
+}
+
+.btn-primary {
+  background-color: #4197C8 !important;
+  border-color: #4197C8 !important;
+}
+
+.btn-primary {
+  background-color: #4197C8 !important;
+}
+
+.text-info {
+  color: #3A657C !important;
+}
+
+.btn-info {
+  background-color: #3A657C !important;
+}
+
+.btn-info:hover {
+  filter: brightness(120%);
+}
+
+.btn-info {
+  background-color: #3A657C !important;
+  border-color: #3A657C !important;
+}
+
+.btn-outline-primary {
+  font-family: Raleway, sans-serif !important;
+  font-size: 1rem !important;
+  color: #3A657C !important;
+  border-color: #3A657C !important;
+}
+
+.btn-outline-primary:hover {
+  font-family: Raleway, sans-serif !important;
+  font-size: 1rem !important;
+  color: #fff !important;
+  background-color: #3A657C !important;
+  border-color: #3A657C !important;
 }
 
 span {
@@ -69,7 +117,7 @@ span {
 }
 
 .profile-picture {
-  background-color: red;
+  background-color: #1F1F1E;
   width: 300px;
   height: 300px;
   border-radius: 50%;
@@ -114,6 +162,12 @@ span {
 .card p {
   margin: 0;
 }
+
+#feedback {
+  background-color: #3A657C;
+}
+
+
 
 @media (max-width: 1500px) {
   .coach-info {
