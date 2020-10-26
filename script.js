@@ -109,7 +109,7 @@ showSkills = (coach) => {
   var skillsHTML = '';
   coach['skills'].forEach((skills) => {
     skillsHTML += `
-      <button type="button" class="btn btn-outline-danger">${skillSet[skills]}</button>
+      <button type="button" class="btn btn-outline-primary">${skillSet[skills]}</button>
     `;
   });
   return skillsHTML;
